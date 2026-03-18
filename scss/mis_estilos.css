@@ -1,0 +1,40 @@
+:root {
+  --size_memmory:30%;
+}
+
+.mi_memoria {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  background-color: coral;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: var(--size_memmory);
+  padding: 1rem;
+}
+.mi_memoria .particion {
+  border: grey solid 1px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: lightyellow;
+}
+.mi_memoria .tam_1 {
+  position: relative;
+  height: 3rem;
+}
+.mi_memoria .tam_1::after {
+  content: "1MB";
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+.mi_memoria .tam_2 {
+  position: relative;
+  height: 6rem;
+}
+.mi_memoria .tam_2::after {
+  content: "2MB";
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}/*# sourceMappingURL=mis_estilos.css.map */
