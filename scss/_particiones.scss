@@ -1,0 +1,60 @@
+
+  .contenedor-columna {
+  width: var(--size_memmory);
+  display: flex;
+  flex-direction: column;
+  margin:2rem;
+  padding:2rem;
+}
+
+  .mi_memoria{
+    display: flex;
+    flex-wrap: wrap;
+    
+    row-gap: 0.5rem;
+    background-color: coral;
+    border-radius: 10px;
+    border: 2px solid black;
+    //width: var(--size_memmory);
+    padding: 1rem;
+
+    .particion {
+      border: grey solid 2px;
+      width: 100%;
+      border-radius: 8px;
+      background-color: lightyellow;
+    }
+
+    .tam_1 {
+      position: relative;
+      height: 3rem;
+
+      &::after {
+        content: "1MB";
+        position: absolute;
+        padding: 0.2rem;
+        right: 0.2rem;
+        top: 0.2rem;
+      }
+      &::before{
+          content: "0";
+          position: absolute;
+          padding: 0.2rem;
+          left: 0.2rem;
+          top: 0.2rem;
+      }
+    }
+
+    .tam_2 {
+      position: relative;
+      height: 6rem;
+
+      &::after {
+        content: "2MB";
+        position: absolute;
+        right: 0.2rem;
+        top: 0.2rem;
+      }
+    }
+  }
+

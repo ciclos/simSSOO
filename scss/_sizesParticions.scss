@@ -1,0 +1,22 @@
+$sizes: (size1:1,
+    size2:2,
+    size3:3,
+    size4:4,
+    size5:5,
+);
+
+@each $name,
+$size in $sizes {
+    .#{$name} {
+        position: relative;
+        height:calc(#{size}*1) rem;
+        &::after {
+            content:"#{ $size * 1 }MB";
+            position: absolute;
+            padding: 0.2rem;
+            right: 0.2rem;
+            top: 0.2rem;
+        }
+
+    }
+}

@@ -2,6 +2,84 @@
   --size_memmory:30%;
 }
 
+.size1 {
+  position: relative;
+  height: calc(size * 1) rem;
+}
+.size1::after {
+  content: "1MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.size2 {
+  position: relative;
+  height: calc(size * 1) rem;
+}
+.size2::after {
+  content: "2MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.size3 {
+  position: relative;
+  height: calc(size * 1) rem;
+}
+.size3::after {
+  content: "3MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.size4 {
+  position: relative;
+  height: calc(size * 1) rem;
+}
+.size4::after {
+  content: "4MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.size5 {
+  position: relative;
+  height: calc(size * 1) rem;
+}
+.size5::after {
+  content: "5MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+
+.titulo {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-columna {
+  width: var(--size_memmory);
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 2rem;
+}
+
 .mi_memoria {
   display: flex;
   flex-wrap: wrap;
@@ -9,11 +87,10 @@
   background-color: coral;
   border-radius: 10px;
   border: 2px solid black;
-  width: var(--size_memmory);
   padding: 1rem;
 }
 .mi_memoria .particion {
-  border: grey solid 1px;
+  border: grey solid 2px;
   width: 100%;
   border-radius: 8px;
   background-color: lightyellow;
@@ -25,7 +102,15 @@
 .mi_memoria .tam_1::after {
   content: "1MB";
   position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
+  top: 0.2rem;
+}
+.mi_memoria .tam_1::before {
+  content: "0";
+  position: absolute;
+  padding: 0.2rem;
+  left: 0.2rem;
   top: 0.2rem;
 }
 .mi_memoria .tam_2 {
