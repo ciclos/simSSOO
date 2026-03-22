@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --size_memmory:30% ;
 }
@@ -23,11 +24,23 @@
 .mi_memoria {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   row-gap: 0.5rem;
   background-color: coral;
   border-radius: 10px;
   border: 2px solid black;
   padding: 1rem;
+}
+.mi_memoria .pestaña-lateral {
+  position: absolute;
+  right: -60px;
+  width: 40px;
+  border-radius: 0.2rem;
+  border: 2px solid black;
+  background-color: aquamarine;
+  padding: 0.5rem;
+  writing-mode: vertical-rl;
+  display: flex;
 }
 .mi_memoria .particion {
   border: rgb(20, 20, 20) solid 2px;
@@ -40,18 +53,10 @@
   position: absolute;
   left: 0.2rem;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 .mi_memoria .particion .info-izq .puntos {
-  color: #666;
-  margin: 2px 0;
-}
-.mi_memoria .particion .info-izq .cero {
-  z-index: 2;
-}
-.mi_memoria .particion .info-izq .numero-direccion {
-  z-index: 2;
+  color: #000000;
 }
 .mi_memoria .particion .nombre-proceso {
   font-weight: bold;

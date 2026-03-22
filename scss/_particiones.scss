@@ -1,4 +1,4 @@
-@use "_variables" as *;
+@use "_variables"as *;
 
 
 .contenedor-columna {
@@ -8,11 +8,12 @@
   margin: 2rem;
   padding: 2rem;
 }
+
 // en mi memoria le tooltip o en el contenedor de memoria
 .mi_memoria {
   display: flex;
   flex-wrap: wrap;
-
+  position: relative;
   row-gap: 0.5rem;
   background-color: coral;
   border-radius: 10px;
@@ -20,58 +21,69 @@
   //width: var(--size_memmory);
   padding: 1rem;
 
+  .pestaña-lateral{
+    position: absolute;
+    right:-60px;
+    width: 40px;
+    border-radius: 0.2rem;
+    border: 2px solid black;
+    background-color: aquamarine;
+    padding: 0.5rem;
+    writing-mode: vertical-rl;
+    display: flex;
+    
+  }
   .particion {
     border: rgb(20, 20, 20) solid 2px;
     width: 100%;
     border-radius: 8px;
     background-color: lightyellow;
-    overflow: hidden;//evito el desbordamiento de la caja de particion 
+    overflow: hidden; //evito el desbordamiento de la caja de particion 
+    
 
-    .info-izq{
+    .info-izq {
       position: absolute;
       left: 0.2rem;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-
-      .puntos{
-        color: #666;
-        margin: 2px 0;
-      }
-      .cero{
-        z-index: 2;
+      //flex-direction: column;
+      .cero {
+    
       }
 
-      .numero-direccion{
-        z-index: 2;
+      .puntos {
+        color: #000000;
+  
       }
+      .numero-direccion {}
+
     }
+
     .nombre-proceso {
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
-  }
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
     @each $name,
     $size in $sizes {
-    &.#{$name} {
-      position: relative;
-      height:calc(#{$size}*1.5rem);
+      &.#{$name} {
+        position: relative;
+        height:calc(#{$size}*1.5rem);
 
-      &::after {
-        content:"#{ $size * 1.5 }MB";
-        position: absolute;
-        padding: 0.2rem;
-        right: 0.2rem;
-        top: 0rem;
-        font-size: 0.8rem;
+        &::after {
+          content:"#{ $size * 1.5 }MB";
+          position: absolute;
+          padding: 0.2rem;
+          right: 0.2rem;
+          top: 0rem;
+          font-size: 0.8rem;
+        }
+
       }
 
     }
-
-  }
   }
 
-
-  
-}
+} 
 
