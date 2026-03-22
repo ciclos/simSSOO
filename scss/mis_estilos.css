@@ -30,10 +30,33 @@
   padding: 1rem;
 }
 .mi_memoria .particion {
-  border: grey solid 2px;
+  border: rgb(20, 20, 20) solid 2px;
   width: 100%;
   border-radius: 8px;
   background-color: lightyellow;
+  overflow: hidden;
+}
+.mi_memoria .particion .info-izq {
+  position: absolute;
+  left: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mi_memoria .particion .info-izq .puntos {
+  color: #666;
+  margin: 2px 0;
+}
+.mi_memoria .particion .info-izq .cero {
+  z-index: 2;
+}
+.mi_memoria .particion .info-izq .numero-direccion {
+  z-index: 2;
+}
+.mi_memoria .particion .nombre-proceso {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
 }
 .mi_memoria .particion.size1 {
   position: relative;
@@ -44,7 +67,7 @@
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
+  top: 0rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size2 {
@@ -56,7 +79,7 @@
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
+  top: 0rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size3 {
@@ -68,7 +91,7 @@
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
+  top: 0rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size4 {
@@ -80,7 +103,7 @@
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
+  top: 0rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size5 {
@@ -92,6 +115,6 @@
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
+  top: 0rem;
   font-size: 0.8rem;
 }/*# sourceMappingURL=mis_estilos.css.map */

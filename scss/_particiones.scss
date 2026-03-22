@@ -8,7 +8,7 @@
   margin: 2rem;
   padding: 2rem;
 }
-
+// en mi memoria le tooltip o en el contenedor de memoria
 .mi_memoria {
   display: flex;
   flex-wrap: wrap;
@@ -21,11 +21,36 @@
   padding: 1rem;
 
   .particion {
-    border: grey solid 2px;
+    border: rgb(20, 20, 20) solid 2px;
     width: 100%;
     border-radius: 8px;
     background-color: lightyellow;
+    overflow: hidden;//evito el desbordamiento de la caja de particion 
 
+    .info-izq{
+      position: absolute;
+      left: 0.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .puntos{
+        color: #666;
+        margin: 2px 0;
+      }
+      .cero{
+        z-index: 2;
+      }
+
+      .numero-direccion{
+        z-index: 2;
+      }
+    }
+    .nombre-proceso {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+  }
     @each $name,
     $size in $sizes {
     &.#{$name} {
@@ -37,13 +62,15 @@
         position: absolute;
         padding: 0.2rem;
         right: 0.2rem;
-        top: 0.2rem;
+        top: 0rem;
         font-size: 0.8rem;
       }
 
     }
+
   }
   }
+
 
   
 }
