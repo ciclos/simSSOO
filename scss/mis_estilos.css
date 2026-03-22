@@ -1,65 +1,5 @@
 :root {
-  --size_memmory:30%;
-}
-
-.size1 {
-  position: relative;
-  height: calc(size * 1) rem;
-}
-.size1::after {
-  content: "1MB";
-  position: absolute;
-  padding: 0.2rem;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-
-.size2 {
-  position: relative;
-  height: calc(size * 1) rem;
-}
-.size2::after {
-  content: "2MB";
-  position: absolute;
-  padding: 0.2rem;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-
-.size3 {
-  position: relative;
-  height: calc(size * 1) rem;
-}
-.size3::after {
-  content: "3MB";
-  position: absolute;
-  padding: 0.2rem;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-
-.size4 {
-  position: relative;
-  height: calc(size * 1) rem;
-}
-.size4::after {
-  content: "4MB";
-  position: absolute;
-  padding: 0.2rem;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-
-.size5 {
-  position: relative;
-  height: calc(size * 1) rem;
-}
-.size5::after {
-  content: "5MB";
-  position: absolute;
-  padding: 0.2rem;
-  right: 0.2rem;
-  top: 0.2rem;
+  --size_memmory:30% ;
 }
 
 .titulo {
@@ -95,31 +35,63 @@
   border-radius: 8px;
   background-color: lightyellow;
 }
-.mi_memoria .tam_1 {
+.mi_memoria .particion.size1 {
   position: relative;
-  height: 3rem;
+  height: calc(1 * 1.5rem);
 }
-.mi_memoria .tam_1::after {
-  content: "1MB";
+.mi_memoria .particion.size1::after {
+  content: "1.5MB";
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
   top: 0.2rem;
+  font-size: 0.8rem;
 }
-.mi_memoria .tam_1::before {
-  content: "0";
+.mi_memoria .particion.size2 {
+  position: relative;
+  height: calc(2 * 1.5rem);
+}
+.mi_memoria .particion.size2::after {
+  content: "3MB";
   position: absolute;
   padding: 0.2rem;
-  left: 0.2rem;
-  top: 0.2rem;
-}
-.mi_memoria .tam_2 {
-  position: relative;
-  height: 6rem;
-}
-.mi_memoria .tam_2::after {
-  content: "2MB";
-  position: absolute;
   right: 0.2rem;
   top: 0.2rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size3 {
+  position: relative;
+  height: calc(3 * 1.5rem);
+}
+.mi_memoria .particion.size3::after {
+  content: "4.5MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size4 {
+  position: relative;
+  height: calc(4 * 1.5rem);
+}
+.mi_memoria .particion.size4::after {
+  content: "6MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size5 {
+  position: relative;
+  height: calc(5 * 1.5rem);
+}
+.mi_memoria .particion.size5::after {
+  content: "7.5MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.2rem;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=mis_estilos.css.map */
