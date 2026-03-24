@@ -1,0 +1,71 @@
+@use "_variables"as *;
+
+
+.contenedor-procesos {
+    width: var(--size_memmory);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.procesos_preparados {
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    row-gap: 0.5rem;
+    background-color: coral;
+    border-radius: 10px;
+    border: 2px solid black;
+    //width: var(--size_memmory);
+    padding: 1rem;
+
+    .particion {
+        border: rgb(20, 20, 20) solid 2px;
+        width: 100%;
+        border-radius: 8px;
+        background-color: lightyellow;
+        overflow: hidden; //evito el desbordamiento de la caja de particion 
+
+        .info-izq {
+            position: absolute;
+            left: 0.2rem;
+            display: flex;
+            justify-content: space-between;
+
+            //flex-direction: column;
+            .numero-direccion {
+                position: absolute;
+                z-index:-1;
+            }
+
+        }
+
+        .nombre-proceso {
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @each $name,
+        $size in $sizes {
+            &.#{$name} {
+                position: relative;
+                height:calc(#{$size}*1.5rem);
+
+                &::after {
+                    content:"#{ $size * 1.5 }MB";
+                    position: absolute;
+                    padding: 0.2rem;
+                    right: 0.2rem;
+                    top: 0rem;
+                    font-size: 0.8rem;
+                }
+
+            }
+
+        }
+    }
+}
