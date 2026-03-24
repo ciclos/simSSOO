@@ -51,7 +51,7 @@
   border: rgb(20, 20, 20) solid 2px;
   width: 100%;
   border-radius: 8px;
-  background-color: rgb(219, 250, 194);
+  background-color: rgb(223, 250, 205);
 }
 .procesos_preparados .particion .info-izq {
   display: flex;
@@ -74,9 +74,10 @@
 .procesos_preparados .particion.size1::after {
   content: "1.5MB";
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.3rem;
   right: 0.2rem;
-  top: 0rem;
+  top: 0.2rem;
+  text-align: center;
   font-size: 0.8rem;
 }
 .procesos_preparados .particion.size2 {
@@ -86,9 +87,10 @@
 .procesos_preparados .particion.size2::after {
   content: "3MB";
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.3rem;
   right: 0.2rem;
-  top: 0rem;
+  top: 0.2rem;
+  text-align: center;
   font-size: 0.8rem;
 }
 .procesos_preparados .particion.size3 {
@@ -98,9 +100,10 @@
 .procesos_preparados .particion.size3::after {
   content: "4.5MB";
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.3rem;
   right: 0.2rem;
-  top: 0rem;
+  top: 0.2rem;
+  text-align: center;
   font-size: 0.8rem;
 }
 .procesos_preparados .particion.size4 {
@@ -110,9 +113,10 @@
 .procesos_preparados .particion.size4::after {
   content: "6MB";
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.3rem;
   right: 0.2rem;
-  top: 0rem;
+  top: 0.2rem;
+  text-align: center;
   font-size: 0.8rem;
 }
 .procesos_preparados .particion.size5 {
@@ -122,9 +126,10 @@
 .procesos_preparados .particion.size5::after {
   content: "7.5MB";
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.3rem;
   right: 0.2rem;
-  top: 0rem;
+  top: 0.2rem;
+  text-align: center;
   font-size: 0.8rem;
 }
 
