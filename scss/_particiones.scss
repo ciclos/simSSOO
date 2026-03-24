@@ -12,87 +12,89 @@
 // en mi memoria le tooltip o en el contenedor de memoria
 .mi_memoria {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
   row-gap: 0.5rem;
-  background-color: coral;
+  background-color: rgba(122, 122, 122, 0.459);
   border-radius: 10px;
   border: 2px solid black;
   //width: var(--size_memmory);
   padding: 1rem;
 
-  .pestaña-lateral{
-    position: absolute;
-    right:-60px;
-    width: 40px;
-    border-radius: 0.2rem;
-    border: 2px solid black;
-    background-color: aquamarine;
-    padding: 0.5rem;
-    writing-mode: vertical-rl;
+  .button-container{
     display: flex;
-    
+    justify-content: center;
   }
+
+
+  .button{
+    border-radius:0.5rem;
+    border: none;
+    background-color: rgb(175, 240, 224);
+    width: 40px;
+    height: 40px;
+  }
+  button:hover{
+    background-color: rgb(108, 146, 137);  
+
+  }
+
   .particion {
+    display: flex;
+    align-items: center;
+    position: relative;
     border: rgb(20, 20, 20) solid 2px;
     width: 100%;
     border-radius: 8px;
     background-color: lightyellow;
-    overflow: hidden; //evito el desbordamiento de la caja de particion 
-    
-    flex-direction: column;
-    flex-grow: 1;
-    
-    .info-izq {
+
+    &::after {
       position: absolute;
-      left: 0.2rem;
-      display: flex;
-      justify-content: space-around;
-      //flex-direction: column;
-      .numero-direccion {
-        position: absolute;
-        z-index:2;
-      }
-        
+      left: 104%;
+      width: 2rem;
+      height: 80%;
+      border-radius: 0.2rem;
+      border: 2px solid black;
+      background-color: rgb(197, 238, 224);
+      writing-mode: vertical-rl;
+
     }
 
+    .info-izq {
+      display: flex;
+      flex-direction: column;
+      margin: 0.2rem;
+      font-size: 1rem;
+      padding: 0.2rem;
+    }
+
+
     .nombre-proceso {
+      flex: 1;
+      text-align: center;
       font-weight: bold;
       font-size: 1.1rem;
       text-align: center;
-      padding: 1rem;
+
     }
 
     @each $name,
     $size in $sizes {
       &.#{$name} {
         position: relative;
-        height:calc(#{$size}*1.5rem);
+        flex: $size;
 
         &::after {
           content:"#{ $size * 1.5 }MB";
           position: absolute;
-          padding: 0.2rem;
-          right: 0.2rem;
-          top: 0rem;
+          padding: 0.3rem;
+          text-align: center;
           font-size: 0.8rem;
         }
 
       }
 
     }
-    &::after{
-        position: relative;
-        right:-190px;
-        width: 40px;
-        border-radius: 0.2rem;
-        border: 2px solid black;
-        background-color: aquamarine;
-        padding: 0.5rem;
-        writing-mode: vertical-rl;
-        
-      }
   }
 
-} 
-
+}
