@@ -12,7 +12,7 @@
 // en mi memoria le tooltip o en el contenedor de memoria
 .procesos_preparados {
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
     position: relative;
     row-gap: 0.5rem;
     background-color: rgba(122, 122, 122, 0.459);
@@ -43,21 +43,22 @@
 
 
     .proceso {
-        display: flex;
+
         align-items: center;
-        position: relative;
+
         border: rgb(20, 20, 20) solid 2px;
         width: 100%;
         border-radius: 8px;
         background-color: rgb(223, 250, 205);
 
-
-        .info-izq {
-            display: flex;
-            flex-direction: column;
-            margin: 0.2rem;
-            font-size: 1rem;
-            padding: 0.2rem;
+        .info-izq  {
+            
+            p{
+                overflow: hidden;
+                margin-top: 0;
+                margin-left: 0.5rem;
+                font-size: 1rem;
+            }
         }
 
 
@@ -74,7 +75,7 @@
         $size in $sizes {
             &.#{$name} {
                 position: relative;
-                flex: $size;
+                height:calc(#{$size}*$min_h_process);
 
                 &::after {
                     content:"#{ $size * 1.5 }MB";
