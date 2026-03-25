@@ -19,8 +19,8 @@
   border-radius: 10px;
   border: 2px solid black;
   //width: var(--size_memmory);
-  padding: 1rem;
-
+  padding: 2rem;
+  overflow: visible;
   .button-container{
     display: flex;
     justify-content: center;
@@ -33,6 +33,7 @@
     background-color: rgb(175, 240, 224);
     width: 40px;
     height: 40px;
+    margin-top: 15rem;
   }
   button:hover{
     background-color: rgb(108, 146, 137);  

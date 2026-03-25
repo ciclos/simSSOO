@@ -7,9 +7,46 @@
   padding: 0.5rem;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext_derecha {
+  visibility: hidden;
+  width: 160px;
+  background-color: #f3a846;
+  color: #0f0f0f;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  margin-top: -15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext_derecha::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #f3a846 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext_derecha {
+  visibility: visible;
+  opacity: 1;
+}
+
 .main-container {
   display: flex;
   justify-content: space-between;
+  padding: 3rem;
 }
 
 .contenedor-procesos {
@@ -28,7 +65,7 @@
   background-color: rgba(122, 122, 122, 0.459);
   border-radius: 10px;
   border: 5px dashed black;
-  padding: 1rem;
+  padding: 2rem;
 }
 .procesos_preparados .button-container {
   display: flex;
@@ -40,11 +77,12 @@
   background-color: rgb(175, 240, 224);
   width: 40px;
   height: 40px;
+  margin-top: 15rem;
 }
 .procesos_preparados button:hover {
   background-color: rgb(108, 146, 137);
 }
-.procesos_preparados .particion {
+.procesos_preparados .proceso {
   display: flex;
   align-items: center;
   position: relative;
@@ -53,25 +91,25 @@
   border-radius: 8px;
   background-color: rgb(223, 250, 205);
 }
-.procesos_preparados .particion .info-izq {
+.procesos_preparados .proceso .info-izq {
   display: flex;
   flex-direction: column;
   margin: 0.2rem;
   font-size: 1rem;
   padding: 0.2rem;
 }
-.procesos_preparados .particion .nombre-proceso {
+.procesos_preparados .proceso .nombre-proceso {
   flex: 1;
   text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
   text-align: center;
 }
-.procesos_preparados .particion.size1 {
+.procesos_preparados .proceso.size1 {
   position: relative;
   flex: 1;
 }
-.procesos_preparados .particion.size1::after {
+.procesos_preparados .proceso.size1::after {
   content: "1.5MB";
   position: absolute;
   padding: 0.3rem;
@@ -80,11 +118,11 @@
   text-align: center;
   font-size: 0.8rem;
 }
-.procesos_preparados .particion.size2 {
+.procesos_preparados .proceso.size2 {
   position: relative;
   flex: 2;
 }
-.procesos_preparados .particion.size2::after {
+.procesos_preparados .proceso.size2::after {
   content: "3MB";
   position: absolute;
   padding: 0.3rem;
@@ -93,11 +131,11 @@
   text-align: center;
   font-size: 0.8rem;
 }
-.procesos_preparados .particion.size3 {
+.procesos_preparados .proceso.size3 {
   position: relative;
   flex: 3;
 }
-.procesos_preparados .particion.size3::after {
+.procesos_preparados .proceso.size3::after {
   content: "4.5MB";
   position: absolute;
   padding: 0.3rem;
@@ -106,11 +144,11 @@
   text-align: center;
   font-size: 0.8rem;
 }
-.procesos_preparados .particion.size4 {
+.procesos_preparados .proceso.size4 {
   position: relative;
   flex: 4;
 }
-.procesos_preparados .particion.size4::after {
+.procesos_preparados .proceso.size4::after {
   content: "6MB";
   position: absolute;
   padding: 0.3rem;
@@ -119,11 +157,11 @@
   text-align: center;
   font-size: 0.8rem;
 }
-.procesos_preparados .particion.size5 {
+.procesos_preparados .proceso.size5 {
   position: relative;
   flex: 5;
 }
-.procesos_preparados .particion.size5::after {
+.procesos_preparados .proceso.size5::after {
   content: "7.5MB";
   position: absolute;
   padding: 0.3rem;
@@ -149,7 +187,8 @@
   background-color: rgba(122, 122, 122, 0.459);
   border-radius: 10px;
   border: 2px solid black;
-  padding: 1rem;
+  padding: 2rem;
+  overflow: visible;
 }
 .mi_memoria .button-container {
   display: flex;
@@ -161,6 +200,7 @@
   background-color: rgb(175, 240, 224);
   width: 40px;
   height: 40px;
+  margin-top: 15rem;
 }
 .mi_memoria button:hover {
   background-color: rgb(108, 146, 137);

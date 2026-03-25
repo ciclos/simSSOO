@@ -20,8 +20,8 @@
     <div class="main-container">
         <div class="contenedor-procesos">
             <h1 class="titulo">Procesos preparados</h1>
-            <div class="procesos_preparados">
-                <div class="particion size1">
+            <div class="procesos_preparados" id="procesos">
+                <div class="proceso size1" draggable="true" id="p1">
                     <div class="info-izq">
                         <span>0</span>
                         <span>...</span>
@@ -31,7 +31,7 @@
 
                     <div class="nombre-proceso">Chrome</div>
                 </div>
-                <div class="particion size4">
+                <div class="proceso size4" draggable="true" id="p2">
                     <div class="info-izq">
                         <span>0</span>
                         <span>...</span>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="nombre-proceso">Chrome</div>
                 </div>
-                <div class="particion size2">
+                <div class="proceso size2" draggable="true" id="p3">
                     <div class="info-izq">
                         <span>0</span>
                         <span>...</span>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="nombre-proceso">Chrome</div>
                 </div>
-                <div class="particion size4">
+                <div class="proceso size4" draggable="true" id="p4">
                     <div class="info-izq">
                         <span>0</span>
                         <span>...</span>
@@ -67,54 +67,27 @@
         <div class="contenedor-particiones">
             <h1 class="titulo">Memoria principal</h1>
 
-            <div class="mi_memoria">
-                <div class="particion size2">
-                    <div class="info-izq">
-                        <span>0</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span class="numero-direccion">1250</span>
-                    </div>
-                    <div class="nombre-proceso">Chrome</div>
+            <div class="mi_memoria" id="contenedor-memoria">
+                <div class="particion size2 tooltip">
+
+                    <span class="tooltiptext_derecha">
+                        Memoria disponible: 1.5MB
+                    </span> 
                 </div>
 
                 <div class="particion size3">
-                    <div class="info-izq">
-                        <span>0</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span class="numero-direccion">1250</span>
-                    </div>
-                    <div class="nombre-proceso">Chrome</div>
+
                 </div>
 
                 <div class="particion size5">
-                    <div class="info-izq">
-                        <span>0</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span class="numero-direccion">1250</span>
-                    </div>
-                    <div class="nombre-proceso">Chrome</div>
+
                 </div>
                 <div class="particion size2">
-                    <div class="info-izq">
-                        <span>0</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span class="numero-direccion">1250</span>
-                    </div>
-                    <div class="nombre-proceso">Chrome</div>
+
                 </div>
 
                 <div class="particion size4">
-                    <div class="info-izq">
-                        <span>0</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span class="numero-direccion">1250</span>
-                    </div>
-                    <div class="nombre-proceso">Chrome</div>
+
                 </div>
                 <div class="button-container">
                     <button class="button">+</button>
@@ -122,6 +95,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="/js/drag.js"></script>
 </body>
 
 </html>
