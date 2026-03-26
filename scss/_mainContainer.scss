@@ -1,5 +1,21 @@
  .main-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3rem;
  }
+
+
+ .contenedor-instruciones{
+   width: 10%;
+   height: 50%;
+   margin-top: 15rem;
+
+   .instruciones{
+   width: 100%;
+   border: 2px solid black;
+   border-radius: 0.5rem;
+   p{
+      text-align: center;
+   }
+ }
+}

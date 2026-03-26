@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --size_memmory:30% ;
 }
@@ -45,14 +49,26 @@
 
 .main-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 3rem;
+}
+
+.contenedor-instruciones {
+  width: 10%;
+  height: 50%;
+  margin-top: 15rem;
+}
+.contenedor-instruciones .instruciones {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+.contenedor-instruciones .instruciones p {
+  text-align: center;
 }
 
 .contenedor-procesos {
   width: var(--size_memmory);
-  display: flex;
-  flex-direction: column;
   margin: 2rem;
   padding: 2rem;
 }
@@ -82,89 +98,202 @@
 .procesos_preparados button:hover {
   background-color: rgb(108, 146, 137);
 }
-.procesos_preparados .proceso {
+
+.proceso {
   align-items: center;
   border: rgb(20, 20, 20) solid 2px;
   width: 100%;
   border-radius: 8px;
   background-color: rgb(223, 250, 205);
 }
-.procesos_preparados .proceso .info-izq p {
-  overflow: hidden;
-  margin-top: 0;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-.procesos_preparados .proceso .nombre-proceso {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-align: center;
-}
-.procesos_preparados .proceso.size1 {
+.proceso.size1 {
   position: relative;
   height: calc(1 * 4rem);
 }
-.procesos_preparados .proceso.size1::after {
-  content: "1.5MB";
+.proceso.size1 > .info-izq {
+  position: relative;
+  top: 0;
+  width: 1rem;
+}
+.proceso.size1 > .info-izq span {
   position: absolute;
-  padding: 0.3rem;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgb(223, 250, 205);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.proceso.size1 > .info-izq span::after {
+  content: "32768";
+}
+.proceso.size1 > .info-izq::after {
+  content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
+  display: block;
+  height: calc(1 * 4rem - 0.5rem);
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.2rem;
+}
+.proceso.size1::after {
+  content: "1MB";
+  position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
-  text-align: center;
+  top: 0rem;
   font-size: 0.8rem;
 }
-.procesos_preparados .proceso.size2 {
+.proceso.size2 {
   position: relative;
   height: calc(2 * 4rem);
 }
-.procesos_preparados .proceso.size2::after {
-  content: "3MB";
+.proceso.size2 > .info-izq {
+  position: relative;
+  top: 0;
+  width: 1rem;
+}
+.proceso.size2 > .info-izq span {
   position: absolute;
-  padding: 0.3rem;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgb(223, 250, 205);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.proceso.size2 > .info-izq span::after {
+  content: "65536";
+}
+.proceso.size2 > .info-izq::after {
+  content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
+  display: block;
+  height: calc(2 * 4rem - 0.5rem);
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.2rem;
+}
+.proceso.size2::after {
+  content: "2MB";
+  position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
-  text-align: center;
+  top: 0rem;
   font-size: 0.8rem;
 }
-.procesos_preparados .proceso.size3 {
+.proceso.size3 {
   position: relative;
   height: calc(3 * 4rem);
 }
-.procesos_preparados .proceso.size3::after {
-  content: "4.5MB";
+.proceso.size3 > .info-izq {
+  position: relative;
+  top: 0;
+  width: 1rem;
+}
+.proceso.size3 > .info-izq span {
   position: absolute;
-  padding: 0.3rem;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgb(223, 250, 205);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.proceso.size3 > .info-izq span::after {
+  content: "98304";
+}
+.proceso.size3 > .info-izq::after {
+  content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
+  display: block;
+  height: calc(3 * 4rem - 0.5rem);
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.2rem;
+}
+.proceso.size3::after {
+  content: "3MB";
+  position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
-  text-align: center;
+  top: 0rem;
   font-size: 0.8rem;
 }
-.procesos_preparados .proceso.size4 {
+.proceso.size4 {
   position: relative;
   height: calc(4 * 4rem);
 }
-.procesos_preparados .proceso.size4::after {
-  content: "6MB";
+.proceso.size4 > .info-izq {
+  position: relative;
+  top: 0;
+  width: 1rem;
+}
+.proceso.size4 > .info-izq span {
   position: absolute;
-  padding: 0.3rem;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgb(223, 250, 205);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.proceso.size4 > .info-izq span::after {
+  content: "131072";
+}
+.proceso.size4 > .info-izq::after {
+  content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
+  display: block;
+  height: calc(4 * 4rem - 0.5rem);
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.2rem;
+}
+.proceso.size4::after {
+  content: "4MB";
+  position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
-  text-align: center;
+  top: 0rem;
   font-size: 0.8rem;
 }
-.procesos_preparados .proceso.size5 {
+.proceso.size5 {
   position: relative;
   height: calc(5 * 4rem);
 }
-.procesos_preparados .proceso.size5::after {
-  content: "7.5MB";
+.proceso.size5 > .info-izq {
+  position: relative;
+  top: 0;
+  width: 1rem;
+}
+.proceso.size5 > .info-izq span {
   position: absolute;
-  padding: 0.3rem;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgb(223, 250, 205);
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.proceso.size5 > .info-izq span::after {
+  content: "163840";
+}
+.proceso.size5 > .info-izq::after {
+  content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
+  display: block;
+  height: calc(5 * 4rem - 0.5rem);
+  overflow: hidden;
+  white-space: pre;
+  padding: 0.2rem;
+}
+.proceso.size5::after {
+  content: "5MB";
+  position: absolute;
+  padding: 0.2rem;
   right: 0.2rem;
-  top: 0.2rem;
-  text-align: center;
+  top: 0rem;
   font-size: 0.8rem;
 }
 
@@ -181,11 +310,14 @@
   flex-direction: column;
   position: relative;
   row-gap: 0.5rem;
-  background-color: rgba(122, 122, 122, 0.459);
+  background-color: rgba(187, 187, 187, 0.95);
   border-radius: 10px;
   border: 2px solid black;
   padding: 2rem;
-  overflow: visible;
+  padding-left: 4rem;
+}
+.mi_memoria .proceso {
+  border-color: red;
 }
 .mi_memoria .button-container {
   display: flex;
@@ -203,30 +335,11 @@
   background-color: rgb(108, 146, 137);
 }
 .mi_memoria .particion {
-  display: flex;
-  align-items: center;
   position: relative;
   border: rgb(20, 20, 20) solid 2px;
   width: 100%;
   border-radius: 8px;
   background-color: lightyellow;
-}
-.mi_memoria .particion::after {
-  position: absolute;
-  left: 104%;
-  width: 2rem;
-  height: 80%;
-  border-radius: 0.2rem;
-  border: 2px solid black;
-  background-color: rgb(197, 238, 224);
-  writing-mode: vertical-rl;
-}
-.mi_memoria .particion .info-izq {
-  display: flex;
-  flex-direction: column;
-  margin: 0.2rem;
-  font-size: 1rem;
-  padding: 0.2rem;
 }
 .mi_memoria .particion .nombre-proceso {
   flex: 1;
@@ -237,56 +350,251 @@
 }
 .mi_memoria .particion.size1 {
   position: relative;
-  flex: 1;
+  height: calc(1 * 4rem);
 }
-.mi_memoria .particion.size1::after {
-  content: "1.5MB";
+.mi_memoria .particion.size1 .pestana-derecha {
   position: absolute;
+  left: 100%;
+  width: 2rem;
+  top: 0.5rem;
+  height: 3rem;
   padding: 0.3rem;
   text-align: center;
   font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+  background-color: rgb(197, 238, 224);
+  writing-mode: vertical-rl;
+}
+.mi_memoria .particion.size1 .pestana-derecha::after {
+  content: "1MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size1 > .info-izq {
+  position: relative;
+}
+.mi_memoria .particion.size1 > .info-izq.fuera {
+  position: absolute;
+  left: -3rem;
+}
+.mi_memoria .particion.size1 > .info-izq span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgba(187, 187, 187, 0.95);
+}
+.mi_memoria .particion.size1 > .info-izq span::after {
+  content: "32768";
+}
+.mi_memoria .particion.size1 > .info-izq::after {
+  content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
+  display: block;
+  height: calc(1 * 4rem);
+  overflow: hidden;
+  white-space: pre;
 }
 .mi_memoria .particion.size2 {
   position: relative;
-  flex: 2;
+  height: calc(2 * 4rem);
 }
-.mi_memoria .particion.size2::after {
-  content: "3MB";
+.mi_memoria .particion.size2 .pestana-derecha {
   position: absolute;
+  left: 100%;
+  width: 2rem;
+  top: 0.5rem;
+  height: 3rem;
   padding: 0.3rem;
   text-align: center;
   font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+  background-color: rgb(197, 238, 224);
+  writing-mode: vertical-rl;
+}
+.mi_memoria .particion.size2 .pestana-derecha::after {
+  content: "2MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size2 > .info-izq {
+  position: relative;
+}
+.mi_memoria .particion.size2 > .info-izq.fuera {
+  position: absolute;
+  left: -3rem;
+}
+.mi_memoria .particion.size2 > .info-izq span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgba(187, 187, 187, 0.95);
+}
+.mi_memoria .particion.size2 > .info-izq span::after {
+  content: "65536";
+}
+.mi_memoria .particion.size2 > .info-izq::after {
+  content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
+  display: block;
+  height: calc(2 * 4rem);
+  overflow: hidden;
+  white-space: pre;
 }
 .mi_memoria .particion.size3 {
   position: relative;
-  flex: 3;
+  height: calc(3 * 4rem);
 }
-.mi_memoria .particion.size3::after {
-  content: "4.5MB";
+.mi_memoria .particion.size3 .pestana-derecha {
   position: absolute;
+  left: 100%;
+  width: 2rem;
+  top: 0.5rem;
+  height: 3rem;
   padding: 0.3rem;
   text-align: center;
   font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+  background-color: rgb(197, 238, 224);
+  writing-mode: vertical-rl;
+}
+.mi_memoria .particion.size3 .pestana-derecha::after {
+  content: "3MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size3 > .info-izq {
+  position: relative;
+}
+.mi_memoria .particion.size3 > .info-izq.fuera {
+  position: absolute;
+  left: -3rem;
+}
+.mi_memoria .particion.size3 > .info-izq span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgba(187, 187, 187, 0.95);
+}
+.mi_memoria .particion.size3 > .info-izq span::after {
+  content: "98304";
+}
+.mi_memoria .particion.size3 > .info-izq::after {
+  content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
+  display: block;
+  height: calc(3 * 4rem);
+  overflow: hidden;
+  white-space: pre;
 }
 .mi_memoria .particion.size4 {
   position: relative;
-  flex: 4;
+  height: calc(4 * 4rem);
 }
-.mi_memoria .particion.size4::after {
-  content: "6MB";
+.mi_memoria .particion.size4 .pestana-derecha {
   position: absolute;
+  left: 100%;
+  width: 2rem;
+  top: 0.5rem;
+  height: 3rem;
   padding: 0.3rem;
   text-align: center;
   font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+  background-color: rgb(197, 238, 224);
+  writing-mode: vertical-rl;
+}
+.mi_memoria .particion.size4 .pestana-derecha::after {
+  content: "4MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size4 > .info-izq {
+  position: relative;
+}
+.mi_memoria .particion.size4 > .info-izq.fuera {
+  position: absolute;
+  left: -3rem;
+}
+.mi_memoria .particion.size4 > .info-izq span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgba(187, 187, 187, 0.95);
+}
+.mi_memoria .particion.size4 > .info-izq span::after {
+  content: "131072";
+}
+.mi_memoria .particion.size4 > .info-izq::after {
+  content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
+  display: block;
+  height: calc(4 * 4rem);
+  overflow: hidden;
+  white-space: pre;
 }
 .mi_memoria .particion.size5 {
   position: relative;
-  flex: 5;
+  height: calc(5 * 4rem);
 }
-.mi_memoria .particion.size5::after {
-  content: "7.5MB";
+.mi_memoria .particion.size5 .pestana-derecha {
   position: absolute;
+  left: 100%;
+  width: 2rem;
+  top: 0.5rem;
+  height: 3rem;
   padding: 0.3rem;
   text-align: center;
   font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+  background-color: rgb(197, 238, 224);
+  writing-mode: vertical-rl;
+}
+.mi_memoria .particion.size5 .pestana-derecha::after {
+  content: "5MB";
+  position: absolute;
+  padding: 0.2rem;
+  right: 0.2rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+.mi_memoria .particion.size5 > .info-izq {
+  position: relative;
+}
+.mi_memoria .particion.size5 > .info-izq.fuera {
+  position: absolute;
+  left: -3rem;
+}
+.mi_memoria .particion.size5 > .info-izq span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+  background-color: rgba(187, 187, 187, 0.95);
+}
+.mi_memoria .particion.size5 > .info-izq span::after {
+  content: "163840";
+}
+.mi_memoria .particion.size5 > .info-izq::after {
+  content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
+  display: block;
+  height: calc(5 * 4rem);
+  overflow: hidden;
+  white-space: pre;
 }/*# sourceMappingURL=mis_estilos.css.map */

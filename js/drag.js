@@ -1,5 +1,6 @@
 eventosProcesos();
 eventosParticiones();
+
 function eventosProcesos(){
     let particiones = document.querySelectorAll("#contenedor-memoria .particion");
     console.log(particiones.length);
@@ -21,6 +22,8 @@ function eventosProcesos(){
                 console.log(proceso)
                 // con this apunto simepre a la particion
                 this.appendChild(proceso);
+                this.querySelector(".tooltiptext_derecha").style.color="red";
+                this.querySelector(".tooltiptext_derecha").innerHTML="hello"
                 
             });
     }
