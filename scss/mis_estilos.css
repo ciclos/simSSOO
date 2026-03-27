@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 
 :root {
-  --size_memmory:30% ;
+  --size_memmory:30%;
 }
 
 .titulo {
@@ -49,7 +50,7 @@
 
 .main-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 3rem;
 }
 
@@ -135,6 +136,7 @@
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .proceso.size1::after {
   content: "1MB";
@@ -173,6 +175,7 @@
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .proceso.size2::after {
   content: "2MB";
@@ -211,6 +214,7 @@
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .proceso.size3::after {
   content: "3MB";
@@ -249,6 +253,7 @@
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .proceso.size4::after {
   content: "4MB";
@@ -287,6 +292,7 @@
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
+  font-size: 0.8rem;
 }
 .proceso.size5::after {
   content: "5MB";

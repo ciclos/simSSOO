@@ -1,18 +1,18 @@
-:root{
-     --size_memmory:30%
-     
+:root {
+    --size_memmory:30%; 
+
 }
+      
+
+$mi_letra:'Courier New', Courier, monospace;
 $color-proceso:rgb(223, 250, 205);
 $fondo-memoria:rgba(187, 187, 187, 0.95);
 $min_h_process:4rem;
 
-$sizes: (
-    size1:1,
+$sizes: (size1:1,
     size2:2,
     size3:3,
     size4:4,
     size5:5,
 );
-// tamaños para generar las clases con for 
-    // refeljasr los que hemos hecho por cada commit  su peculiaridad
-    // 
+

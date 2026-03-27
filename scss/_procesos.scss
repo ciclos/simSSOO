@@ -3,7 +3,7 @@
 
 .contenedor-procesos {
     width: var(--size_memmory);
-
+    
     margin: 2rem;
     padding: 2rem;
 }
@@ -85,6 +85,7 @@
                         overflow: hidden;
                         white-space: pre;
                         padding: 0.2rem;
+                        font-size: 0.8rem;
                     }
 
                 }

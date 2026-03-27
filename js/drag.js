@@ -22,8 +22,10 @@ function eventosProcesos(){
                 console.log(proceso)
                 // con this apunto simepre a la particion
                 this.appendChild(proceso);
+                
                 this.querySelector(".tooltiptext_derecha").style.color="red";
-                this.querySelector(".tooltiptext_derecha").innerHTML="hello"
+                this.querySelector(".tooltiptext_derecha").innerHTML="hello";
+                
                 
             });
     }
