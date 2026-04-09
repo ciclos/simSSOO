@@ -1,10 +1,31 @@
-* {
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-}
-
 :root {
   --size_memmory:30%;
+}
+
+.modal {
+  background-color: rgba(89, 12, 12, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  display: none;
+}
+.modal div.contenido {
+  width: 40vw;
+  height: 70vh;
+  border-radius: 10px;
+  background-color: rgb(54, 92, 123);
+  position: absolute;
+  left: 30%;
+  top: 10%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .titulo {
@@ -58,6 +79,7 @@
   width: 10%;
   height: 50%;
   margin-top: 15rem;
+  text-align: justify;
 }
 .contenedor-instruciones .instruciones {
   width: 100%;
@@ -109,7 +131,7 @@
 }
 .proceso.size1 {
   position: relative;
-  height: calc(1 * 4rem);
+  height: calc(1 * 50px);
 }
 .proceso.size1 > .info-izq {
   position: relative;
@@ -132,7 +154,7 @@
 .proceso.size1 > .info-izq::after {
   content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
   display: block;
-  height: calc(1 * 4rem - 0.5rem);
+  height: calc(1 * 50px - 0.5rem);
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
@@ -148,7 +170,7 @@
 }
 .proceso.size2 {
   position: relative;
-  height: calc(2 * 4rem);
+  height: calc(2 * 50px);
 }
 .proceso.size2 > .info-izq {
   position: relative;
@@ -171,7 +193,7 @@
 .proceso.size2 > .info-izq::after {
   content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
   display: block;
-  height: calc(2 * 4rem - 0.5rem);
+  height: calc(2 * 50px - 0.5rem);
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
@@ -187,7 +209,7 @@
 }
 .proceso.size3 {
   position: relative;
-  height: calc(3 * 4rem);
+  height: calc(3 * 50px);
 }
 .proceso.size3 > .info-izq {
   position: relative;
@@ -210,7 +232,7 @@
 .proceso.size3 > .info-izq::after {
   content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
   display: block;
-  height: calc(3 * 4rem - 0.5rem);
+  height: calc(3 * 50px - 0.5rem);
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
@@ -226,7 +248,7 @@
 }
 .proceso.size4 {
   position: relative;
-  height: calc(4 * 4rem);
+  height: calc(4 * 50px);
 }
 .proceso.size4 > .info-izq {
   position: relative;
@@ -249,7 +271,7 @@
 .proceso.size4 > .info-izq::after {
   content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
   display: block;
-  height: calc(4 * 4rem - 0.5rem);
+  height: calc(4 * 50px - 0.5rem);
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
@@ -265,7 +287,7 @@
 }
 .proceso.size5 {
   position: relative;
-  height: calc(5 * 4rem);
+  height: calc(5 * 50px);
 }
 .proceso.size5 > .info-izq {
   position: relative;
@@ -288,7 +310,7 @@
 .proceso.size5 > .info-izq::after {
   content: "0\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...\a...";
   display: block;
-  height: calc(5 * 4rem - 0.5rem);
+  height: calc(5 * 50px - 0.5rem);
   overflow: hidden;
   white-space: pre;
   padding: 0.2rem;
@@ -356,7 +378,7 @@
 }
 .mi_memoria .particion.size1 {
   position: relative;
-  height: calc(1 * 4rem);
+  height: calc(1 * 50px);
 }
 .mi_memoria .particion.size1 .pestana-derecha {
   position: absolute;
@@ -400,13 +422,13 @@
 .mi_memoria .particion.size1 > .info-izq::after {
   content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
   display: block;
-  height: calc(1 * 4rem);
+  height: calc(1 * 50px);
   overflow: hidden;
   white-space: pre;
 }
 .mi_memoria .particion.size2 {
   position: relative;
-  height: calc(2 * 4rem);
+  height: calc(2 * 50px);
 }
 .mi_memoria .particion.size2 .pestana-derecha {
   position: absolute;
@@ -450,13 +472,13 @@
 .mi_memoria .particion.size2 > .info-izq::after {
   content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
   display: block;
-  height: calc(2 * 4rem);
+  height: calc(2 * 50px);
   overflow: hidden;
   white-space: pre;
 }
 .mi_memoria .particion.size3 {
   position: relative;
-  height: calc(3 * 4rem);
+  height: calc(3 * 50px);
 }
 .mi_memoria .particion.size3 .pestana-derecha {
   position: absolute;
@@ -500,13 +522,13 @@
 .mi_memoria .particion.size3 > .info-izq::after {
   content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
   display: block;
-  height: calc(3 * 4rem);
+  height: calc(3 * 50px);
   overflow: hidden;
   white-space: pre;
 }
 .mi_memoria .particion.size4 {
   position: relative;
-  height: calc(4 * 4rem);
+  height: calc(4 * 50px);
 }
 .mi_memoria .particion.size4 .pestana-derecha {
   position: absolute;
@@ -550,13 +572,13 @@
 .mi_memoria .particion.size4 > .info-izq::after {
   content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
   display: block;
-  height: calc(4 * 4rem);
+  height: calc(4 * 50px);
   overflow: hidden;
   white-space: pre;
 }
 .mi_memoria .particion.size5 {
   position: relative;
-  height: calc(5 * 4rem);
+  height: calc(5 * 50px);
 }
 .mi_memoria .particion.size5 .pestana-derecha {
   position: absolute;
@@ -600,7 +622,38 @@
 .mi_memoria .particion.size5 > .info-izq::after {
   content: "0 \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... \a... ";
   display: block;
-  height: calc(5 * 4rem);
+  height: calc(5 * 50px);
   overflow: hidden;
   white-space: pre;
+}
+
+table.algoritmo {
+  border: 2px solid black;
+  padding: 0;
+  border-collapse: collapse;
+}
+table.algoritmo td {
+  margin: 0;
+  width: 2rem;
+  border: 2px solid black;
+  text-align: center;
+}
+table.algoritmo tr {
+  padding: 0;
+}
+
+table.datos {
+  border: 2px solid black;
+  padding: 0;
+  border-collapse: collapse;
+}
+table.datos td {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid black;
+  text-align: center;
+}
+table.datos tr {
+  padding: 0;
 }/*# sourceMappingURL=mis_estilos.css.map */

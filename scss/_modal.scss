@@ -1,0 +1,20 @@
+.modal{
+        background-color: rgba(89, 12, 12, 0.5);
+        width: 100vw;
+        height:100vh;
+        position: absolute;
+        top:0;
+        left:0;
+        border: 1px solid black;
+        display: none;
+
+        div.contenido{
+            width: 40vw;
+            height: 70vh;
+            border-radius: 10px;
+            background-color: rgb(54, 92, 123);
+            position: absolute;
+            left: 30%;
+            top: 10%;
+        }
+    }
