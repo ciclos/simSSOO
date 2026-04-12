@@ -29,18 +29,30 @@
             <button>Cerrar</button>
         </form>
     </dialog> -->
-
-    <dialog id="alert-dialog" >
-        <h3>¡Vuelve a la sombra!</h3>
-        <img src="img/image.png" alt="Gandalf" width="20%" height="20%">
-        <p>¡NO... PUEDES... PASAR!</p>
-        <form>
-            <button formmethod="dialog">Ok!</button>
-        </form>
-    </dialog>
-
+   
+    
+  <div class="contenedor-dialogo">
+         <div class="contenido"  id="add-proceso">
+            <button class="cerrar" onclick="cerrar('add-proceso')">X</button>
+            
+            <label for="">
+                Nombre
+                <input type="text">
+            </label>
+            <label for="">
+                Capacidad
+                <input type="number">
+            </label>
+            <img src="img/image.png" alt="Gandalf" width="20%" height="20%">
+            
+            <form>
+                <button >OK!</button>
+            </form>
+        </div>
+    </div>
 
     <div class="main-container">
+      
 
         <div class="contenedor-procesos">
             <h1 class="titulo">Procesos preparados</h1>
@@ -79,7 +91,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="button" onclick="mostrarModal()" id="show-button">+</button>
+                    <button class="button" onclick="mostrarModal('add-proceso')" id="show-button">+</button>
                 </div>
 
             </div>

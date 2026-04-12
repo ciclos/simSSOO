@@ -1,5 +1,7 @@
 eventosProcesos();
 eventosParticiones();
+const letrasProcesos=["A","B","C","D","E","F"];
+let countProcesos=1;
 
 function eventosProcesos(){
     
@@ -56,26 +58,67 @@ function addRowDatos(){
 
         for (let index = 0; index < 3; index++) {
             fila.appendChild(document.createElement('td'));
-
+         
         }
-    
+        
         elementoTbody.appendChild(fila);
 
-        let tiempos=document.querySelectorAll("table.algoritmo tbody tr td").length;
+        let tiempos=document.querySelectorAll("table.algoritmo tbody tr:first-child td").length;
         let filaTiempos=document.createElement('tr');
+        countProcesos++;
         
         for (let index = 0; index < tiempos; index++) {
             filaTiempos.appendChild(document.createElement('td'));
-        }
+            filaTiempos.cells[index].innerHTML="&nbsp;";
 
+            filaTiempos.cells[index].addEventListener('click',()=>{
+                filaTiempos.cells[index].innerText="E";
+                
+            });
+            filaTiempos.cells[index].addEventListener('dblclick',()=>{
+                filaTiempos.cells[index].innerText="-";
+                
+            });
+
+        }
+         filaTiempos.cells[0].innerHTML=letrasProcesos[countProcesos];
         elementoAlgo.appendChild(filaTiempos);
 
         
 }
 
-const showButton = document.querySelector("#show-button");
+function addColumn(){
+
+    let tiempos=document.querySelectorAll("table.algoritmo tbody");
+    
+
+    for (let index = 0; index < countProcesos; index++) {
+
+        console.log(tiempos[index]);
+        let fila=tiempos[index].children[index];// cojo los tr
+        console.log("fila->"+fila);
+        fila.appendChild(document.createElement('td'));
+        fila.cells[index].innerHTML="&nbsp;";
+        
+    }
+
+}
+
+/* const showButton = document.querySelector("#show-button");
 showButton.addEventListener("click", function () {
   const alertDialog = document.querySelector("#alert-dialog");
   alertDialog.showModal();
-});
+}); */
+
+function mostrarModal(id){
+    document.querySelector('.contenedor-dialogo').style.display='block';
+    document.querySelector('#'+id).style.display='block';
+    document.body.style.overflow='hidden';
+}
+
+function cerrar(id){
+    document.querySelector('.contenedor-dialogo').style.display='none';
+    document.querySelector('#'+id).style.display='none';
+    document.body.style.overflow='visible';
+}
 

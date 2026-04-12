@@ -3,8 +3,9 @@ table.algoritmo{
      border: 2px solid black;
      padding: 0;
      border-collapse: collapse;
-    
-    td{
+     letter-spacing: 1px;
+     font-size: 0.8rem;
+    th,td{
         margin: 0;
         width: 2rem;
         border: 2px solid black;
@@ -12,7 +13,6 @@ table.algoritmo{
     }
     tr{
         padding: 0;
-       
     }
 }
 

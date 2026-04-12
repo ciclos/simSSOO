@@ -2,24 +2,31 @@
   --size_memmory:30%;
 }
 
-.modal {
-  background-color: rgba(89, 12, 12, 0.5);
+.contenedor-dialogo {
+  background-color: rgba(102, 95, 95, 0.5);
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
-  border: 1px solid black;
   display: none;
+  z-index: 100;
 }
-.modal div.contenido {
+.contenedor-dialogo div.contenido {
   width: 40vw;
   height: 70vh;
+  padding: 1.5rem;
   border-radius: 10px;
-  background-color: rgb(54, 92, 123);
+  background-color: rgb(155, 215, 247);
   position: absolute;
   left: 30%;
   top: 10%;
+  display: none;
+}
+.contenedor-dialogo div.contenido button.cerrar {
+  position: absolute;
+  left: 90%;
+  padding: 0.5rem;
 }
 
 * {
@@ -631,8 +638,10 @@ table.algoritmo {
   border: 2px solid black;
   padding: 0;
   border-collapse: collapse;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
 }
-table.algoritmo td {
+table.algoritmo th, table.algoritmo td {
   margin: 0;
   width: 2rem;
   border: 2px solid black;
