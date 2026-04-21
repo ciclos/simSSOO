@@ -233,8 +233,34 @@ body {
   position: relative;
   left: 10rem;
 }
+.container-algoritmos .container-datos .button-container {
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+.container-algoritmos .container-datos .button {
+  border-radius: var(--border-radius);
+  border: rgb(20, 20, 20) solid 2px;
+  background-color: var(--color-botones);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
 .container-algoritmos .container-algoritmos {
   padding: 2rem;
+}
+.container-algoritmos .container-algoritmos .button-container {
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+.container-algoritmos .container-algoritmos .button {
+  border-radius: var(--border-radius);
+  border: rgb(20, 20, 20) solid 2px;
+  background-color: var(--color-botones);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
 }
 
 .contenedor-procesos {
@@ -848,7 +874,8 @@ table.algoritmo {
   letter-spacing: 1px;
   font-size: 1rem;
 }
-table.algoritmo th, table.algoritmo td {
+table.algoritmo th,
+table.algoritmo td {
   margin: 0;
   padding: 0.5rem;
   width: 2rem;
@@ -865,7 +892,8 @@ table.datos {
   border-collapse: collapse;
   font-size: 1rem;
 }
-table.datos th, table.datos td {
+table.datos th,
+table.datos td {
   margin: 0;
   padding: 0.5rem;
   width: 2rem;

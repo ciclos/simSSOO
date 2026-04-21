@@ -1,45 +1,77 @@
- .main-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 0rem 1.5rem;
-    
- }
+.main-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 0rem 1.5rem;
 
- .contenedor-instruciones{
+}
+
+.contenedor-instruciones {
    width: 20%;
    height: 100%;
-   text-align:center;
+   text-align: center;
    padding-top: 5rem;
-   font-size:10pt;
-      .instruciones{
-         width: 100%;
-         text-align: center;
-         span{
-            width:5rem;
-            padding: 0.5rem;
-            border: 2px solid black;
-            border-radius: 0.5rem;
-         }
+   font-size: 10pt;
+
+   .instruciones {
+      width: 100%;
+      text-align: center;
+
+      span {
+         width: 5rem;
+         padding: 0.5rem;
+         border: 2px solid black;
+         border-radius: 0.5rem;
+      }
    }
 }
 
-.container-algoritmos{
+.container-algoritmos {
    padding: 1rem;
    margin: 1rem;
    width: 100%;
    display: flex;
    align-items: center;
-   justify-content:space-around;
-   
-   .container-datos{
+   justify-content: space-around;
+
+   .container-datos {
       padding: 2rem;
       position: relative;
-      left:10rem;
+      left: 10rem;
+
+      .button-container {
+         padding: 0.5rem;
+         text-align: center;
+         width: 100%;
+      }
+
+      .button {
+         border-radius: var(--border-radius);
+         border: rgb(20, 20, 20) solid 2px;
+         background-color: var(--color-botones);
+         width: 40px;
+         height: 40px;
+         transition: all 0.3s ease;
+
+      }
    }
 
-   .container-algoritmos{
+   .container-algoritmos {
       padding: 2rem;
-      
+      .button-container {
+         padding: 0.5rem;
+         text-align: center;
+         width: 100%;
+      }
+
+      .button {
+         border-radius: var(--border-radius);
+         border: rgb(20, 20, 20) solid 2px;
+         background-color: var(--color-botones);
+         width: 40px;
+         height: 40px;
+         transition: all 0.3s ease;
+
+      }
    }
-   
+
 }
