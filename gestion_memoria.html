@@ -29,35 +29,71 @@
             <button>Cerrar</button>
         </form>
     </dialog> -->
-   
-    
-  <div class="contenedor-dialogo">
-         <div class="contenido"  id="add-proceso">
+
+
+    <div class="contenedor-dialogo">
+        <div class="contenido" id="add-proceso">
             <button class="cerrar" onclick="cerrar('add-proceso')">X</button>
-            
-            <label for="">
-                Nombre
-                <input type="text">
-            </label>
-            <label for="">
-                Capacidad
-                <input type="number">
-            </label>
-            <img src="img/image.png" alt="Gandalf" width="20%" height="20%">
-            
-            <form>
-                <button >OK!</button>
-            </form>
+            <h1>Añadir contenido</h1>
+
+            <div class="box-select">
+                <label for="">Seleciona el contenido a crear</label>
+                <select name="tipo" id="tipo">
+                    <option value="" selected disabled>Seleciona el tipo</option>
+                    <option value="Memoria">Memoria</option>
+                    <option value="Proceso">Proceso</option>
+                </select>
+            </div>
+
+            <div class="formulario-modal">
+
+                <div class="grupo-input">
+                    <label for="">
+                        Nombre
+
+                    </label>
+                    <input type="text" id="name-process" placeholder="Nombre">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="">
+                        Tamaño
+
+                    </label>
+                    <input type="number" id="size-process" placeholder="Tamaño" min="0" max="10">
+                </div>
+
+                <button id="create" >OK!</button>
+            </div>
         </div>
     </div>
+    <!--     <div class="container-tour">
+        <div class="instruciones" id="instrucion-1">
+                Este recuardo represnta los procesos y los tamñaos indicados arriba a la derecha a la izquierda se indica la cantidad de instruciones que tienes
+        </div>
+    </div> -->
+    <header>
+        <h1 class="titulo ">--WEB INTERACTIVA DE SISTEMAS OPERATIVOS--</h1>
+        <ul class="navigation">
+            <li>
+                <a href="/gestion_memoria.html">Memoria</a>
+            </li>
+
+            <li>
+                <a href="/algoritmos_procesos.html">Algoritmos</a>
+            </li>
+        </ul>
+    </header>
+
+    <h1 class="titulo">GESTION MEMORIA</h1>
 
     <div class="main-container">
-      
-
         <div class="contenedor-procesos">
             <h1 class="titulo">Procesos preparados</h1>
             <div class="procesos_preparados" id="procesos">
+
                 <div class="proceso size1" draggable="true" id="p1">
+
                     <div class="info-izq ">
                         <span>
 
@@ -65,31 +101,20 @@
 
                     </div>
                 </div>
-                <div class="proceso size4" draggable="true" id="p2">
+
+                <div class="proceso size2" draggable="true" id="p2">
                     <div class="info-izq ">
                         <span>
 
                         </span>
 
                     </div>
-                    <!-- <div class="nombre-proceso">Chrome</div> -->
-                </div>
-                <div class="proceso size2" draggable="true" id="p3">
-                    <div class="info-izq ">
-                        <span>
 
-                        </span>
-
+                    <div class="nombre-proceso">
+                        <p>Chrome</p>
                     </div>
                 </div>
-                <div class="proceso size4" draggable="true" id="p4">
-                    <div class="info-izq ">
-                        <span>
 
-                        </span>
-
-                    </div>
-                </div>
                 <div class="button-container">
                     <button class="button" onclick="mostrarModal('add-proceso')" id="show-button">+</button>
                 </div>
@@ -102,7 +127,7 @@
         <div class="contenedor-instruciones">
             <h1 class="titulo">Tamaño de las Instruciones</h1>
             <div class="instruciones">
-                <p>32bits</p>
+                <span>32bits</span>
             </div>
         </div>
 
@@ -122,29 +147,6 @@
                     <div class="pestana-derecha"></div>
                 </div>
 
-                <div class="particion size3 tooltip">
-                    <div class="info-izq fuera">
-                        <span>
-
-                        </span>
-                    </div>
-                    <span class="tooltiptext_derecha">
-                        Memoria disponible: 1.5MB
-                    </span>
-                    <div class="pestana-derecha"></div>
-                </div>
-
-                <div class="particion size5 tooltip">
-                    <div class="info-izq fuera">
-                        <span>
-
-                        </span>
-                    </div>
-                    <span class="tooltiptext_derecha">
-                        Memoria disponible: 1.5MB
-                    </span>
-                    <div class="pestana-derecha"></div>
-                </div>
                 <div class="particion size2 tooltip">
                     <div class="info-izq fuera">
                         <span>
@@ -157,25 +159,17 @@
                     <div class="pestana-derecha"></div>
                 </div>
 
-                <div class="particion size4 tooltip">
-                    <div class="info-izq fuera">
-                        <span>
-
-                        </span>
-                    </div>
-                    <span class="tooltiptext_derecha">
-                        Memoria disponible: 1.5MB
-                    </span>
-                    <div class="pestana-derecha"></div>
-                </div>
                 <div class="button-container">
-                    <button class="button">+</button>
+                    <button class="button" onclick="mostrarModal('add-proceso')">+</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="alerta">
+        <p>El proceso es demasiado grande</p>
+    </div>
     <script type="text/javascript" src="/js/drag.js"></script>
+    <script type="text/javascript" src="/js/modals.js"></script>
 </body>
 
 </html>

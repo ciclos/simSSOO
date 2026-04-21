@@ -1,21 +1,37 @@
  .main-container{
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 0rem 1.5rem;
     
  }
 
  .contenedor-instruciones{
-   width: 10%;
-   height: 50%;
-   margin-top: 15rem;
-   text-align: justify;
-   .instruciones{
-   width: 100%;
-   border: 2px solid black;
-   border-radius: 0.5rem;
-   p{
-      text-align: center;
+   width: 20%;
+   height: 100%;
+   text-align:center;
+   padding-top: 5rem;
+   font-size:10pt;
+      .instruciones{
+         width: 100%;
+         text-align: center;
+         span{
+            width:5rem;
+            padding: 0.5rem;
+            border: 2px solid black;
+            border-radius: 0.5rem;
+         }
    }
- }
+}
+
+.container-algoritmos{
+   padding: 1rem;
+   margin: 1rem;
+   width: 100%;
+   display: flex;
+   justify-content:space-around;
+
+   .container-datos{
+      display: inline-block;
+   }
+   
 }

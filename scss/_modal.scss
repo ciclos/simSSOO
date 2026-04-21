@@ -1,31 +1,78 @@
-.contenedor-dialogo{
-        background-color: rgba(102, 95, 95, 0.5);
-        width: 100vw;
-        height:100vh;
-        position: sticky;
-        top:0;
-        left:0;
-        
-        display: none;
-        z-index: 100;
+.contenedor-dialogo {
+    background-color: rgba(102, 95, 95, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display:none;
+    z-index: 100;
 
-        div.contenido{
-            width: 40vw;
-            height: 70vh;
-            padding: 1.5rem;
-            border-radius: 10px;
-            background-color: rgb(155, 215, 247);
+    div.contenido {
+        width: 40vw;
+        text-align: center;
+        height: 70vh;
+        padding: 1.5rem;
+        border-radius: 10px;
+        background-color: rgb(155, 215, 247);
+        border: 2px solid black;
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        margin: 1rem;
+
+
+        .box-select{
+            display: block;
+            padding: 0.5rem;
+            margin:0.5rem;
+            label{
+                    display: block;
+                    margin-bottom: 0.5rem;
+                }
+            
+        }
+
+        button.cerrar {
             position: absolute;
-            left: 30%;
-            top: 10%;
-            display: none;
+            left: 90%;
+            padding: 0.5rem;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
 
-            button.cerrar{
-                position: absolute;
-                left: 90%;
-                padding: 0.5rem;
-
+        .formulario-modal {
+            padding: 1rem;
+            text-align: left;
+            .grupo-input {
+                padding: 1.5rem;
+                label{
+                    display: block;
+                    margin-bottom: 0.5rem;
+                }
+                input {
+                display: block;  
+                width: 100%;      
+                padding: 0.8rem;
+                border: 2px solid black;
+                border-radius: 0.5rem;
+                box-sizing: border-box; 
+                }
+            }
+            button{
+                display: block;
+                margin:2rem auto 0;
+                padding: 0.8rem 2.5rem;
+                background-color: aqua;
+                border: 2px solid black;
+                border-radius: 1rem;
+                cursor: pointer;
             }
         }
-        
+
+
     }
+
+}

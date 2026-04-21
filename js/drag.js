@@ -1,13 +1,12 @@
 eventosProcesos();
 eventosParticiones();
 const letrasProcesos=["A","B","C","D","E","F"];
-let countProcesos=1;
+let countProcesos=0;
 
 function eventosProcesos(){
     
     let particiones = document.querySelectorAll("#contenedor-memoria .particion");
     
-    console.log(particiones.length);
     for(i=0; i < particiones.length;i++){
 
         particiones[i].addEventListener("dragover", 
@@ -23,14 +22,21 @@ function eventosProcesos(){
                 let proceso = document.getElementById(
                     event.dataTransfer.getData("text")
                     );
-                console.log(proceso)
+                
                 // con this apunto simepre a la particion
-                this.appendChild(proceso);
+                
                 
                 
                 let tam=parseInt(getComputedStyle(this).height) - parseInt(getComputedStyle(proceso).height);
+                if(tam<0){
+                    
+                    document.querySelector(".alerta").classList.add("alerta-animacion");
+                }else{
+                    this.appendChild(proceso);
+                    this.querySelector(".tooltiptext_derecha").innerHTML="Memoria disponible: "+tam/50+" MB";
+
+                }
                 
-                this.querySelector(".tooltiptext_derecha").innerHTML="Memoria disponible: "+tam/50+" MB";
                 
                 
             });
@@ -89,36 +95,25 @@ function addRowDatos(){
 
 function addColumn(){
 
-    let tiempos=document.querySelectorAll("table.algoritmo tbody");
-    
+    let tiempos=document.querySelectorAll("table.algoritmo tbody tr");
 
-    for (let index = 0; index < countProcesos; index++) {
+    
+    tiempos.forEach(fila=>{
+        fila.appendChild(document.createElement('td'));
+    })
+
+    /* for (let index = 0; index < countProcesos; index++) {
 
         console.log(tiempos[index]);
-        let fila=tiempos[index].children[index];// cojo los tr
+        let fila=tiempos[index].children[countProcesos];// cojo los tr
         console.log("fila->"+fila);
         fila.appendChild(document.createElement('td'));
-        fila.cells[index].innerHTML="&nbsp;";
+        fila.cells[countProcesos].innerHTML="&nbsp;";
         
-    }
+    }  */
 
 }
 
-/* const showButton = document.querySelector("#show-button");
-showButton.addEventListener("click", function () {
-  const alertDialog = document.querySelector("#alert-dialog");
-  alertDialog.showModal();
-}); */
 
-function mostrarModal(id){
-    document.querySelector('.contenedor-dialogo').style.display='block';
-    document.querySelector('#'+id).style.display='block';
-    document.body.style.overflow='hidden';
-}
 
-function cerrar(id){
-    document.querySelector('.contenedor-dialogo').style.display='none';
-    document.querySelector('#'+id).style.display='none';
-    document.body.style.overflow='visible';
-}
 

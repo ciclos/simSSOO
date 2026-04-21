@@ -1,0 +1,27 @@
+.container-tour{
+    background-color: rgba(102, 95, 95, 0.5);
+    width: 100vw;
+    height: 100%;
+    position:absolute;
+
+    top: 0;
+    left: 0;
+    display:block;
+    z-index: 100;
+
+    .instruciones{
+        border: 2px solid black;
+        display: inline-block;
+        position: absolute;
+        background-color: aliceblue;
+        padding: 1rem;
+        //display:none;
+
+    }
+
+    #instrucion-1{
+        top: 50px;
+        left: 20px;
+    }
+}
+

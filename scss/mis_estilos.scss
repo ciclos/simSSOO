@@ -1,4 +1,7 @@
 @use "_variables";
+@use "_tour";
+@use "_navbar";
+@use "_home";
 @use "_modal";
 @use "_reset";
 @use "_titles";
@@ -7,6 +10,7 @@
 @use "_procesos";
 @use "_particiones";
 @use "_algoritmo_procesos";
+@use "_alerta";
 
 //@use "_navbar";
 

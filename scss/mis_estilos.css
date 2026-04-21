@@ -1,5 +1,91 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap");
 :root {
   --size_memmory:30%;
+}
+
+.container-tour {
+  background-color: rgba(102, 95, 95, 0.5);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 100;
+}
+.container-tour .instruciones {
+  border: 2px solid black;
+  display: inline-block;
+  position: absolute;
+  background-color: aliceblue;
+  padding: 1rem;
+}
+.container-tour #instrucion-1 {
+  top: 50px;
+  left: 20px;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  background: rgb(206, 229, 236);
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Formato del botón */
+.navigation li {
+  background: rgb(167, 199, 176);
+  margin-top: 10px;
+  padding: 1em;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 0.1em solid black;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+.navigation li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navigation li:hover {
+  background-color: rgb(116, 145, 124);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2rem;
+  margin: 4rem;
+  text-align: center;
+}
+.container div.card-button {
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 4rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: bisque;
+}
+.container div.card-button:hover {
+  background-color: rgb(186, 245, 239);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.container div.card-button a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .contenedor-dialogo {
@@ -14,30 +100,80 @@
 }
 .contenedor-dialogo div.contenido {
   width: 40vw;
+  text-align: center;
   height: 70vh;
   padding: 1.5rem;
   border-radius: 10px;
   background-color: rgb(155, 215, 247);
+  border: 2px solid black;
   position: absolute;
   left: 30%;
   top: 10%;
-  display: none;
+  margin: 1rem;
+}
+.contenedor-dialogo div.contenido .box-select {
+  display: block;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.contenedor-dialogo div.contenido .box-select label {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 .contenedor-dialogo div.contenido button.cerrar {
   position: absolute;
   left: 90%;
   padding: 0.5rem;
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.contenedor-dialogo div.contenido .formulario-modal {
+  padding: 1rem;
+  text-align: left;
+}
+.contenedor-dialogo div.contenido .formulario-modal .grupo-input {
+  padding: 1.5rem;
+}
+.contenedor-dialogo div.contenido .formulario-modal .grupo-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.contenedor-dialogo div.contenido .formulario-modal .grupo-input input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.contenedor-dialogo div.contenido .formulario-modal button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2.5rem;
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Oxanium", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
 }
 
 .titulo {
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .tooltip {
@@ -79,28 +215,42 @@
 .main-container {
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 0rem 1.5rem;
 }
 
 .contenedor-instruciones {
-  width: 10%;
-  height: 50%;
-  margin-top: 15rem;
-  text-align: justify;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 10pt;
 }
 .contenedor-instruciones .instruciones {
   width: 100%;
+  text-align: center;
+}
+.contenedor-instruciones .instruciones span {
+  width: 5rem;
+  padding: 0.5rem;
   border: 2px solid black;
   border-radius: 0.5rem;
 }
-.contenedor-instruciones .instruciones p {
-  text-align: center;
+
+.container-algoritmos {
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.container-algoritmos .container-datos {
+  display: inline-block;
 }
 
 .contenedor-procesos {
   width: var(--size_memmory);
-  margin: 2rem;
-  padding: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .procesos_preparados {
@@ -114,8 +264,8 @@
   padding: 2rem;
 }
 .procesos_preparados .button-container {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 .procesos_preparados .button {
   border-radius: 0.5rem;
@@ -123,7 +273,6 @@
   background-color: rgb(175, 240, 224);
   width: 40px;
   height: 40px;
-  margin-top: 15rem;
 }
 .procesos_preparados button:hover {
   background-color: rgb(108, 146, 137);
@@ -143,7 +292,8 @@
 .proceso.size1 > .info-izq {
   position: relative;
   top: 0;
-  width: 1rem;
+  width: 5rem;
+  float: left;
 }
 .proceso.size1 > .info-izq span {
   position: absolute;
@@ -167,6 +317,17 @@
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.proceso.size1 .nombre-proceso {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.proceso.size1 .nombre-proceso p {
+  text-align: center;
+}
 .proceso.size1::after {
   content: "1MB";
   position: absolute;
@@ -182,7 +343,8 @@
 .proceso.size2 > .info-izq {
   position: relative;
   top: 0;
-  width: 1rem;
+  width: 5rem;
+  float: left;
 }
 .proceso.size2 > .info-izq span {
   position: absolute;
@@ -206,6 +368,17 @@
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.proceso.size2 .nombre-proceso {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.proceso.size2 .nombre-proceso p {
+  text-align: center;
+}
 .proceso.size2::after {
   content: "2MB";
   position: absolute;
@@ -221,7 +394,8 @@
 .proceso.size3 > .info-izq {
   position: relative;
   top: 0;
-  width: 1rem;
+  width: 5rem;
+  float: left;
 }
 .proceso.size3 > .info-izq span {
   position: absolute;
@@ -245,6 +419,17 @@
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.proceso.size3 .nombre-proceso {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.proceso.size3 .nombre-proceso p {
+  text-align: center;
+}
 .proceso.size3::after {
   content: "3MB";
   position: absolute;
@@ -260,7 +445,8 @@
 .proceso.size4 > .info-izq {
   position: relative;
   top: 0;
-  width: 1rem;
+  width: 5rem;
+  float: left;
 }
 .proceso.size4 > .info-izq span {
   position: absolute;
@@ -284,6 +470,17 @@
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.proceso.size4 .nombre-proceso {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.proceso.size4 .nombre-proceso p {
+  text-align: center;
+}
 .proceso.size4::after {
   content: "4MB";
   position: absolute;
@@ -299,7 +496,8 @@
 .proceso.size5 > .info-izq {
   position: relative;
   top: 0;
-  width: 1rem;
+  width: 5rem;
+  float: left;
 }
 .proceso.size5 > .info-izq span {
   position: absolute;
@@ -323,6 +521,17 @@
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.proceso.size5 .nombre-proceso {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.proceso.size5 .nombre-proceso p {
+  text-align: center;
+}
 .proceso.size5::after {
   content: "5MB";
   position: absolute;
@@ -336,8 +545,8 @@
   width: var(--size_memmory);
   display: flex;
   flex-direction: column;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .mi_memoria {
@@ -355,8 +564,8 @@
   border-color: red;
 }
 .mi_memoria .button-container {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 .mi_memoria .button {
   border-radius: 0.5rem;
@@ -364,7 +573,6 @@
   background-color: rgb(175, 240, 224);
   width: 40px;
   height: 40px;
-  margin-top: 15rem;
 }
 .mi_memoria button:hover {
   background-color: rgb(108, 146, 137);
@@ -665,4 +873,37 @@ table.datos td {
 }
 table.datos tr {
   padding: 0;
+}
+
+@keyframes entrada {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.alerta {
+  padding: 2rem;
+  margin: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  background-color: aqua;
+  border: 2px solid;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  transform: scale(0);
+}
+
+.alerta-animacion {
+  animation-name: entrada;
+  animation-duration: 4s;
 }/*# sourceMappingURL=mis_estilos.css.map */

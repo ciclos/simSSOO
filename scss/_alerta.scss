@@ -1,0 +1,32 @@
+@keyframes entrada{
+    0%{ transform: scale(0);}
+    10%{ transform: scale(1);}
+    90%{ transform: scale(1);}
+    100%{
+        transform: scale(0);
+    }
+}
+
+.alerta{
+    padding: 2rem;
+    margin: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    background-color: aqua;
+    border: 2px solid;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    //display: none;
+    z-index:300;
+    transform: scale(0);
+
+}
+
+.alerta-animacion{
+
+    animation-name: entrada;
+    animation-duration: 4s;
+
+}
+
