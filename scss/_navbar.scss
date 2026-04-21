@@ -1,7 +1,7 @@
 .navigation {
   list-style: none;
   margin: 0;
-  background: rgb(206, 229, 236);
+  background:var(--color-navBar) ;
   display: flex;
   
   justify-content: space-around;
@@ -10,7 +10,7 @@
 
 /* Formato del botón */
 .navigation li {
-  background: rgb(167, 199, 176);
+  background:var(--color-botones);
   margin-top: 10px;
   padding: 1em;
   color: rgb(0, 0, 0);
@@ -32,7 +32,7 @@
   }
 
   &:hover {
-    background-color: rgb(116, 145, 124);
+    background-color: var(--color-hover);
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }

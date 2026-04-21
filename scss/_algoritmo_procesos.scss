@@ -4,9 +4,10 @@ table.algoritmo{
      padding: 0;
      border-collapse: collapse;
      letter-spacing: 1px;
-     font-size: 0.8rem;
+     font-size:1rem;
     th,td{
         margin: 0;
+        padding: 0.5rem;
         width: 2rem;
         border: 2px solid black;
         text-align: center;
@@ -20,9 +21,11 @@ table.datos{
      border: 2px solid black;
      padding: 0;
      border-collapse: collapse;
+     font-size:1rem;
 
-    td{
+    th,td{
         margin: 0;
+        padding: 0.5rem;
         width: 2rem;
         height: 2rem;
         border: 2px solid black;
@@ -30,6 +33,6 @@ table.datos{
     }
     tr{
         padding: 0;
-       
+
     }
 }

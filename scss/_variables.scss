@@ -1,11 +1,21 @@
 :root {
     --size_memmory:30%; 
+    --color-botones: rgb(221, 253, 211);
+    --color-navBar:rgb(215, 246, 255);
+    --color-hover:rgb(154, 192, 164);
+    --border-radius:0.5rem;
+    --border:1px;
+    --color-contenedor:rgba(185, 185, 185, 0.679);
+    --color-proceso:rgb(171, 208, 145);
+    --color-particion:rgb(252, 252, 174);
+    --color-proceso-add:rgb(255, 157, 0);
+    --color-toltip:rgb(188, 250, 64);
+    --color-modal:rgb(165, 203, 223);
 }
       
 
+// VARIABLES DE SASS $VARIABLE
 $mi_letra:'Courier New', Courier, monospace;
-$color-proceso:rgb(223, 250, 205);
-$fondo-memoria:rgba(187, 187, 187, 0.95);
 $min_h_process:50px;
 
  $sizes: (size1:1,

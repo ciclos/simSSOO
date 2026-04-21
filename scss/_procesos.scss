@@ -13,8 +13,8 @@
     flex-wrap: wrap;
     position: relative;
     row-gap: 0.5rem;
-    background-color: rgba(122, 122, 122, 0.459);
-    border-radius: 10px;
+    background-color: var(--color-contenedor);
+    border-radius: var(--border-radius);
     border: 5px dashed black;
     //width: var(--size_memmory);
     padding: 2rem;
@@ -22,22 +22,23 @@
 
     .button-container {
         text-align: center;
-           width: 100%;
+        width: 100%;
     }
 
 
     .button {
-        border-radius: 0.5rem;
-        border: none;
-        background-color: rgb(175, 240, 224);
+        border-radius:var(--border-radius);
+        border:rgb(20, 20, 20) solid 2px;
+        background-color: var(--color-botones);
         width: 40px;
         height: 40px;
+        transition: all 0.3s ease;
 
     }
 
     button:hover {
-        background-color: rgb(108, 146, 137);
-
+        background-color:var(--color-hover);
+        transform: scale(1.1);
     }
 
 }
@@ -46,8 +47,8 @@
     align-items: center;
     border: rgb(20, 20, 20) solid 2px;
     width: 100%;
-    border-radius: 8px;
-    background-color: rgb(223, 250, 205);
+    border-radius:var(--border-radius);;
+    background-color: var(--color-proceso);
 
 
 
@@ -69,7 +70,7 @@
                     left: 0;
                     bottom: 0;
                     font-size: 0.8rem;
-                    background-color: $color-proceso;
+                    background-color: var(--color-proceso);
                     border-radius: 0.3rem;
                     padding: 0.4rem;
                     margin-bottom: 0.2rem;
