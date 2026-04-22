@@ -165,6 +165,27 @@
   top: 10%;
   margin: 1rem;
 }
+.contenedor-simulador div.contenido .partes-simulador {
+  display: flex;
+  justify-content: space-around;
+  padding: 0rem 1.5rem;
+}
+.contenedor-simulador div.contenido .partes-simulador .caja {
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid black;
+  width: 50%;
+  height: 100%;
+}
+.contenedor-simulador div.contenido .partes-simulador .lateral-izq {
+  padding: 1rem;
+}
+.contenedor-simulador div.contenido .partes-simulador .centro {
+  padding: 1rem;
+}
+.contenedor-simulador div.contenido .partes-simulador .lateral-drch {
+  padding: 1rem;
+}
 .contenedor-simulador div.contenido button.cerrar {
   position: absolute;
   left: 90%;
@@ -175,6 +196,29 @@
   cursor: pointer;
 }
 
+/* .main-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 0rem 1.5rem;
+
+   .caja {
+      padding: 1rem;
+      text-align: center;
+      border: 2px solid black;
+      width: 50%;
+      height: 100%;
+   }
+
+   .lateral-izq {
+      padding: 1rem;
+   }
+
+   .centro {
+      padding: 1rem;
+   }
+
+   .lateral-drch {}
+} */
 * {
   margin: 0;
   padding: 0;
@@ -234,22 +278,6 @@ body {
   justify-content: space-around;
   padding: 0rem 1.5rem;
 }
-.main-container .caja {
-  padding: 1rem;
-  text-align: center;
-  border: 2px solid black;
-  width: 50%;
-  height: 100%;
-}
-.main-container .lateral-izq {
-  padding: 1rem;
-}
-.main-container .centro {
-  padding: 1rem;
-}
-.main-container .lateral-drch {
-  padding: 1rem;
-}
 .main-container .contenedor-instruciones {
   width: 20%;
   height: 100%;
@@ -284,7 +312,8 @@ body {
   background-color: var(--color-hover);
   transform: scale(1.1);
 }
-.main-container .container-algoritmos {
+
+.container-algoritmos {
   padding: 1rem;
   margin: 1rem;
   width: 100%;
@@ -292,12 +321,12 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-.main-container .container-algoritmos .button-container {
+.container-algoritmos .button-container {
   padding: 0.5rem;
   text-align: center;
   width: 100%;
 }
-.main-container .container-algoritmos .button {
+.container-algoritmos .button {
   border-radius: var(--border-radius);
   border: rgb(20, 20, 20) solid 2px;
   background-color: var(--color-botones);
@@ -305,16 +334,16 @@ body {
   height: 40px;
   transition: all 0.3s ease;
 }
-.main-container .container-algoritmos .button:hover {
+.container-algoritmos .button:hover {
   background-color: var(--color-hover);
   transform: scale(1.1);
 }
-.main-container .container-algoritmos .container-datos {
+.container-algoritmos .container-datos {
   padding: 2rem;
   position: relative;
   left: 10rem;
 }
-.main-container .container-algoritmos .container-algoritmos {
+.container-algoritmos .container-algoritmos {
   padding: 2rem;
 }
 

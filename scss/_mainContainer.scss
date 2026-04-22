@@ -3,27 +3,6 @@
    justify-content: space-around;
    padding: 0rem 1.5rem;
 
-   .caja {
-      padding: 1rem;
-      text-align: center;
-      border: 2px solid black;
-      width: 50%;
-      height: 100%;
-   }
-
-   .lateral-izq {
-      padding: 1rem;
-   }
-
-   .centro {
-      padding: 1rem;
-   }
-
-   .lateral-drch {
-      padding: 1rem;
-   }
-
-
    .contenedor-instruciones {
       width: 20%;
       height: 100%;
@@ -67,7 +46,9 @@
       }
    }
 
-   .container-algoritmos {
+}
+
+.container-algoritmos {
       padding: 1rem;
       margin: 1rem;
       width: 100%;
@@ -108,4 +89,3 @@
       }
 
    }
-}

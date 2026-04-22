@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    display:none;
+    display: none;
     z-index: 100;
 
     div.contenido {
@@ -14,7 +14,7 @@
         height: 70vh;
         padding: 1.5rem;
         border-radius: var(--border-radius);
-        background-color:var(--color-modal);
+        background-color: var(--color-modal);
         border: 2px solid black;
         position: absolute;
         left: 30%;
@@ -22,52 +22,57 @@
         margin: 1rem;
 
 
-        .box-select{
+        .box-select {
             display: block;
             padding: 0.5rem;
-            margin:0.5rem;
-            label{
-                    display: block;
-                    margin-bottom: 0.5rem;
-                }
-            
+            margin: 0.5rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
         }
 
         button.cerrar {
             position: absolute;
             left: 90%;
             padding: 0.5rem;
-            background-color:var(--color-botones);
+            background-color: var(--color-botones);
             border: 2px solid black;
-            border-radius:var(--border-radius);
+            border-radius: var(--border-radius);
             cursor: pointer;
         }
 
         .formulario-modal {
             padding: 1rem;
             text-align: left;
+
             .grupo-input {
                 padding: 1.5rem;
-                label{
+
+                label {
                     display: block;
                     margin-bottom: 0.5rem;
                 }
+
                 input {
-                display: block;  
-                width: 100%;      
-                padding: 0.8rem;
-                border: 2px solid black;
-                border-radius:var(--border-radius);
-                box-sizing: border-box; 
+                    display: block;
+                    width: 100%;
+                    padding: 0.8rem;
+                    border: 2px solid black;
+                    border-radius: var(--border-radius);
+                    box-sizing: border-box;
                 }
             }
-            button{
+
+            button {
                 display: block;
-                margin:2rem auto 0;
+                margin: 2rem auto 0;
                 padding: 0.8rem 2.5rem;
-                background-color:var(--color-botones);
+                background-color: var(--color-botones);
                 border: 2px solid black;
-                border-radius:var(--border-radius);
+                border-radius: var(--border-radius);
                 cursor: pointer;
             }
         }
@@ -86,7 +91,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    display:none;
+    display: none;
     z-index: 100;
 
     div.contenido {
@@ -95,12 +100,38 @@
         height: 70vh;
         padding: 1.5rem;
         border-radius: var(--border-radius);
-        background-color:var(--color-modal);
+        background-color: var(--color-modal);
         border: 2px solid black;
         position: absolute;
         left: 30%;
         top: 10%;
         margin: 1rem;
+
+        .partes-simulador{
+            display: flex;
+            justify-content: space-around;
+            padding: 0rem 1.5rem;
+
+            .caja {
+                padding: 1rem;
+                text-align: center;
+                border: 2px solid black;
+                width: 50%;
+                height: 100%;
+            }
+
+            .lateral-izq {
+                padding: 1rem;
+            }
+
+            .centro {
+                padding: 1rem;
+            }
+
+            .lateral-drch {
+                padding: 1rem;
+            }
+        }
 
 
 
@@ -109,9 +140,9 @@
             position: absolute;
             left: 90%;
             padding: 0.5rem;
-            background-color:var(--color-botones);
+            background-color: var(--color-botones);
             border: 2px solid black;
-            border-radius:var(--border-radius);
+            border-radius: var(--border-radius);
             cursor: pointer;
         }
 
@@ -121,3 +152,28 @@
     }
 
 }
+
+
+/* .main-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 0rem 1.5rem;
+
+   .caja {
+      padding: 1rem;
+      text-align: center;
+      border: 2px solid black;
+      width: 50%;
+      height: 100%;
+   }
+
+   .lateral-izq {
+      padding: 1rem;
+   }
+
+   .centro {
+      padding: 1rem;
+   }
+
+   .lateral-drch {}
+} */
