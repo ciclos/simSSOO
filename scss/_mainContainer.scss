@@ -1,62 +1,80 @@
 .main-container {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    padding: 0rem 1.5rem;
 
-}
-
-.contenedor-instruciones {
-   width: 20%;
-   height: 100%;
-   text-align: center;
-   padding-top: 5rem;
-   font-size: 10pt;
-
-   .instruciones {
-      width: 100%;
+   .caja {
+      padding: 1rem;
       text-align: center;
-
-      span {
-         width: 5rem;
-         padding: 0.5rem;
-         border: 2px solid black;
-         border-radius: 0.5rem;
-      }
+      border: 2px solid black;
+      width: 50%;
+      height: 100%;
    }
-}
 
-.container-algoritmos {
-   padding: 1rem;
-   margin: 1rem;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
+   .lateral-izq {
+      padding: 1rem;
+   }
 
-   .container-datos {
-      padding: 2rem;
-      position: relative;
-      left: 10rem;
+   .centro {
+      padding: 1rem;
+   }
+
+   .lateral-drch {
+      padding: 1rem;
+   }
+
+
+   .contenedor-instruciones {
+      width: 20%;
+      height: 100%;
+      text-align: center;
+      padding-top: 5rem;
+      font-size: 10pt;
+
+      .instruciones {
+         width: 100%;
+         text-align: center;
+
+         span {
+            width: 5rem;
+            padding: 0.5rem;
+            border: 2px solid black;
+            border-radius: 0.5rem;
+         }
+      }
 
       .button-container {
-         padding: 0.5rem;
          text-align: center;
          width: 100%;
+         padding: 1rem;
+
       }
+
 
       .button {
          border-radius: var(--border-radius);
          border: rgb(20, 20, 20) solid 2px;
          background-color: var(--color-botones);
-         width: 40px;
+         width: 50%;
          height: 40px;
          transition: all 0.3s ease;
 
+      }
+
+      button:hover {
+         background-color: var(--color-hover);
+         transform: scale(1.1);
       }
    }
 
    .container-algoritmos {
-      padding: 2rem;
+      padding: 1rem;
+      margin: 1rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
       .button-container {
          padding: 0.5rem;
          text-align: center;
@@ -71,7 +89,23 @@
          height: 40px;
          transition: all 0.3s ease;
 
+         &:hover {
+            background-color: var(--color-hover);
+            transform: scale(1.1);
+         }
       }
-   }
 
+      .container-datos {
+         padding: 2rem;
+         position: relative;
+         left: 10rem;
+
+      }
+
+      .container-algoritmos {
+         padding: 2rem;
+
+      }
+
+   }
 }

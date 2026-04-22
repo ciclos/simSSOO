@@ -142,6 +142,39 @@
   cursor: pointer;
 }
 
+.contenedor-simulador {
+  background-color: rgba(102, 95, 95, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+}
+.contenedor-simulador div.contenido {
+  width: 40vw;
+  text-align: center;
+  height: 70vh;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-modal);
+  border: 2px solid black;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  margin: 1rem;
+}
+.contenedor-simulador div.contenido button.cerrar {
+  position: absolute;
+  left: 90%;
+  padding: 0.5rem;
+  background-color: var(--color-botones);
+  border: 2px solid black;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -198,29 +231,60 @@ body {
 
 .main-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0rem 1.5rem;
 }
-
-.contenedor-instruciones {
+.main-container .caja {
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid black;
+  width: 50%;
+  height: 100%;
+}
+.main-container .lateral-izq {
+  padding: 1rem;
+}
+.main-container .centro {
+  padding: 1rem;
+}
+.main-container .lateral-drch {
+  padding: 1rem;
+}
+.main-container .contenedor-instruciones {
   width: 20%;
   height: 100%;
   text-align: center;
   padding-top: 5rem;
   font-size: 10pt;
 }
-.contenedor-instruciones .instruciones {
+.main-container .contenedor-instruciones .instruciones {
   width: 100%;
   text-align: center;
 }
-.contenedor-instruciones .instruciones span {
+.main-container .contenedor-instruciones .instruciones span {
   width: 5rem;
   padding: 0.5rem;
   border: 2px solid black;
   border-radius: 0.5rem;
 }
-
-.container-algoritmos {
+.main-container .contenedor-instruciones .button-container {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+.main-container .contenedor-instruciones .button {
+  border-radius: var(--border-radius);
+  border: rgb(20, 20, 20) solid 2px;
+  background-color: var(--color-botones);
+  width: 50%;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+.main-container .contenedor-instruciones button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.1);
+}
+.main-container .container-algoritmos {
   padding: 1rem;
   margin: 1rem;
   width: 100%;
@@ -228,39 +292,30 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-.container-algoritmos .container-datos {
+.main-container .container-algoritmos .button-container {
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+.main-container .container-algoritmos .button {
+  border-radius: var(--border-radius);
+  border: rgb(20, 20, 20) solid 2px;
+  background-color: var(--color-botones);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+.main-container .container-algoritmos .button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.1);
+}
+.main-container .container-algoritmos .container-datos {
   padding: 2rem;
   position: relative;
   left: 10rem;
 }
-.container-algoritmos .container-datos .button-container {
-  padding: 0.5rem;
-  text-align: center;
-  width: 100%;
-}
-.container-algoritmos .container-datos .button {
-  border-radius: var(--border-radius);
-  border: rgb(20, 20, 20) solid 2px;
-  background-color: var(--color-botones);
-  width: 40px;
-  height: 40px;
-  transition: all 0.3s ease;
-}
-.container-algoritmos .container-algoritmos {
+.main-container .container-algoritmos .container-algoritmos {
   padding: 2rem;
-}
-.container-algoritmos .container-algoritmos .button-container {
-  padding: 0.5rem;
-  text-align: center;
-  width: 100%;
-}
-.container-algoritmos .container-algoritmos .button {
-  border-radius: var(--border-radius);
-  border: rgb(20, 20, 20) solid 2px;
-  background-color: var(--color-botones);
-  width: 40px;
-  height: 40px;
-  transition: all 0.3s ease;
 }
 
 .contenedor-procesos {
@@ -566,6 +621,23 @@ body {
   margin: 1rem;
   padding: 1rem;
 }
+.contenedor-particiones .button-container {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+.contenedor-particiones .button {
+  border-radius: var(--border-radius);
+  border: rgb(20, 20, 20) solid 2px;
+  background-color: var(--color-botones);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+.contenedor-particiones button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.1);
+}
 
 .mi_memoria {
   display: flex;
@@ -580,22 +652,6 @@ body {
 }
 .mi_memoria .proceso {
   border-color: var(--color-proceso-add);
-}
-.mi_memoria .button-container {
-  text-align: center;
-  width: 100%;
-}
-.mi_memoria .button {
-  border-radius: var(--border-radius);
-  border: rgb(20, 20, 20) solid 2px;
-  background-color: var(--color-botones);
-  width: 40px;
-  height: 40px;
-  transition: all 0.3s ease;
-}
-.mi_memoria button:hover {
-  background-color: var(--color-hover);
-  transform: scale(1.1);
 }
 .mi_memoria .particion {
   position: relative;
@@ -619,7 +675,7 @@ body {
   position: absolute;
   left: 100%;
   width: 2rem;
-  top: 0.5rem;
+  top: auto;
   height: 3rem;
   padding: 0.3rem;
   text-align: center;
@@ -634,7 +690,7 @@ body {
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.5rem;
+  top: 0.4rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size1 > .info-izq {
@@ -670,7 +726,7 @@ body {
   position: absolute;
   left: 100%;
   width: 2rem;
-  top: 0.5rem;
+  top: auto;
   height: 3rem;
   padding: 0.3rem;
   text-align: center;
@@ -685,7 +741,7 @@ body {
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.5rem;
+  top: 0.4rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size2 > .info-izq {
@@ -721,7 +777,7 @@ body {
   position: absolute;
   left: 100%;
   width: 2rem;
-  top: 0.5rem;
+  top: auto;
   height: 3rem;
   padding: 0.3rem;
   text-align: center;
@@ -736,7 +792,7 @@ body {
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.5rem;
+  top: 0.4rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size3 > .info-izq {
@@ -772,7 +828,7 @@ body {
   position: absolute;
   left: 100%;
   width: 2rem;
-  top: 0.5rem;
+  top: auto;
   height: 3rem;
   padding: 0.3rem;
   text-align: center;
@@ -787,7 +843,7 @@ body {
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.5rem;
+  top: 0.4rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size4 > .info-izq {
@@ -823,7 +879,7 @@ body {
   position: absolute;
   left: 100%;
   width: 2rem;
-  top: 0.5rem;
+  top: auto;
   height: 3rem;
   padding: 0.3rem;
   text-align: center;
@@ -838,7 +894,7 @@ body {
   position: absolute;
   padding: 0.2rem;
   right: 0.2rem;
-  top: 0.5rem;
+  top: 0.4rem;
   font-size: 0.8rem;
 }
 .mi_memoria .particion.size5 > .info-izq {

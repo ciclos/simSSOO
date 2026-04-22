@@ -76,3 +76,48 @@
     }
 
 }
+
+
+
+.contenedor-simulador {
+    background-color: rgba(102, 95, 95, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display:none;
+    z-index: 100;
+
+    div.contenido {
+        width: 40vw;
+        text-align: center;
+        height: 70vh;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        background-color:var(--color-modal);
+        border: 2px solid black;
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        margin: 1rem;
+
+
+
+
+        button.cerrar {
+            position: absolute;
+            left: 90%;
+            padding: 0.5rem;
+            background-color:var(--color-botones);
+            border: 2px solid black;
+            border-radius:var(--border-radius);
+            cursor: pointer;
+        }
+
+
+
+
+    }
+
+}

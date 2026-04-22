@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function mostrarModal(id) {
-    document.querySelector('.contenedor-dialogo').style.display = 'block';
+function mostrarModal(id,modal) {
+    document.querySelector('.contenedor' + modal).style.display = 'block';
     document.querySelector('#' + id).style.display = 'block';
     document.body.style.overflow = 'hidden';
 }
 
-function cerrar(id) {
-    document.querySelector('.contenedor-dialogo').style.display = 'none';
+function cerrar(id,modal) {
+    document.querySelector('.contenedor' + modal).style.display = 'none';
     document.querySelector('#' + id).style.display = 'none';
     document.body.style.overflow = 'visible';
 }
@@ -27,7 +27,6 @@ function crearContenido() {
         if (nombre != "" && tam != "" && opcionSelected != "") {
 
             if (opcionSelected === "Proceso") {
-
                 let contenedorProcesos = document.querySelector(".procesos_preparados");
                 let procesoCreado = document.createElement("div");
                 procesoCreado.classList.add("proceso");

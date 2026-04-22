@@ -7,31 +7,11 @@
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
-}
 
-// en mi memoria le tooltip o en el contenedor de memoria
-.mi_memoria {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  row-gap: 0.5rem;
-  background-color:var(--color-contenedor);
-  border-radius: var(--border-radius);
-  border: 2px solid black;
-  //width: var(--size_memmory);
-  padding: 2rem;
-  padding-left: 4rem;
-
-  .proceso{
-    border-color:var(--color-proceso-add);
-    
-  }
-  //overflow: visible;
-
- 
-    .button-container {
+  .button-container {
         text-align: center;
         width: 100%;
+        padding: 1rem;
     }
 
 
@@ -48,7 +28,28 @@
     background-color: var(--color-hover);
     transform: scale(1.1);
   }
+}
 
+// en mi memoria le tooltip o en el contenedor de memoria
+.mi_memoria {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 0.5rem;
+  background-color:var(--color-contenedor);
+  border-radius: var(--border-radius);
+  border: 2px solid black;
+  //width: var(--size_memmory);
+  padding: 2rem;
+  padding-left: 4rem;
+
+   
+
+  .proceso{
+    border-color:var(--color-proceso-add);
+    
+  }
+  //overflow: visible;
 
 
   .particion {
@@ -85,7 +86,7 @@
           position: absolute;
           left: 100%;
           width: 2rem;
-          top: 0.5rem;
+          top:auto;
           height: 3rem;
           padding: 0.3rem;
           text-align: center;
@@ -100,7 +101,7 @@
                     position: absolute;
                     padding: 0.2rem;
                     right: 0.2rem;
-                    top: 0.5rem;
+                    top: 0.4rem;
                     font-size: 0.8rem;
           }
         }
@@ -122,10 +123,10 @@
             border-radius: 0.3rem;
 
             &::after {
-              content: "#{ $size * 32768}";
+              content: "#{ $size * 32768}";//wiki
             }
           }
-          // info derecha de memoria
+          // info derecha de memoria wiki
           &::after {
             content: "0 \A ... \A... \A ... \A... \A ... \A... \A ... \A... \A ... \A... \A ... \A... \A ... \A... \A ... \A... ";
             display: block;

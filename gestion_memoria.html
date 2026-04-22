@@ -9,31 +9,12 @@
 </head>
 
 <body>
-    <!--    <nav>
-        <ul>
-            <li>
-                <a href="">Ejemplo</a>
-            </li>
-        </ul>
-    </nav> -->
-    <!-- <dialog open closedby="any">
-        <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <path fill="#888888" d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8
-        8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10
-        10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z" />
-            </svg>
-            Esto es un ejemplo de mensaje de diálogo.
-        </p>
-        <form method="dialog">
-            <button>Cerrar</button>
-        </form>
-    </dialog> -->
 
 
+    <!-- MODAL PARA AÑADIR CONTENIDO -->
     <div class="contenedor-dialogo">
         <div class="contenido" id="add-proceso">
-            <button class="cerrar" onclick="cerrar('add-proceso')">X</button>
+            <button class="cerrar" onclick="cerrar('add-proceso','-dialogo')">X</button>
             <h1>Añadir contenido</h1>
 
             <div class="box-select">
@@ -63,10 +44,36 @@
                     <input type="number" id="size-process" placeholder="Tamaño" min="1" max="5">
                 </div>
 
-                <button id="create" >OK!</button>
+                <button id="create">OK!</button>
             </div>
         </div>
     </div>
+    <!-- MODAL SIMULADOR -->
+    <div class="contenedor-simulador">
+        <div class="contenido" id="simulador">
+            <button class="cerrar" onclick="cerrar('simulador','-simulador')">X</button>
+            <h1>Reubicacion</h1>
+            <hr>
+            <div class="main-container">
+                <div class="lateral-izq">
+                    lateral izquierdo
+                    <div class="caja">
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="centro">
+                    central
+                </div>
+                <div class="lateral-drch">
+                    lateral derecho
+                    <div class="caja">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TOUR -->
     <!--     <div class="container-tour">
         <div class="instruciones" id="instrucion-1">
                 Este recuardo represnta los procesos y los tamñaos indicados arriba a la derecha a la izquierda se indica la cantidad de instruciones que tienes
@@ -88,6 +95,7 @@
     <h1 class="titulo">GESTION MEMORIA</h1>
 
     <div class="main-container">
+        <!-- PROCESOS -->
         <div class="contenedor-procesos">
             <h1 class="titulo">Procesos preparados</h1>
             <div class="procesos_preparados" id="procesos">
@@ -116,21 +124,23 @@
                 </div>
 
                 <div class="button-container">
-                    <button class="button" onclick="mostrarModal('add-proceso')" id="show-button">+</button>
+                    <button class="button" onclick="mostrarModal('add-proceso','-dialogo')" id="show-button">+</button>
                 </div>
 
             </div>
-
-
         </div>
-
+        <!-- INSTRUCIONES -->
         <div class="contenedor-instruciones">
             <h1 class="titulo">Tamaño de las Instruciones</h1>
             <div class="instruciones">
                 <span>32bits</span>
             </div>
-        </div>
+            <div class="button-container">
+                <button class="button" onclick="mostrarModal('simulador','-simulador')">Simulador</button>
+            </div>
 
+        </div>
+        <!-- PARTICIONES -->
         <div class="contenedor-particiones">
             <h1 class="titulo">Memoria principal</h1>
 
@@ -159,12 +169,15 @@
                     <div class="pestana-derecha"></div>
                 </div>
 
-                <div class="button-container">
-                    <button class="button" onclick="mostrarModal('add-proceso')">+</button>
-                </div>
+
+            </div>
+
+            <div class="button-container">
+                <button class="button" onclick="mostrarModal('add-proceso','-dialogo')">+</button>
             </div>
         </div>
     </div>
+    <!-- ALERT DE TAMAÑO -->
     <div class="alerta">
         <p>El proceso es demasiado grande</p>
     </div>
