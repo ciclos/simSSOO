@@ -10,21 +10,49 @@
 
 <body>
 
-
-    <!-- MODAL PARA AÑADIR CONTENIDO -->
-    <div class="contenedor-dialogo">
+    <!-- MODAL PARA AÑADIR CONTENIDO PARTICIONES -->
+    <div class="modal" id="particiones">
         <div class="contenido" id="add-proceso">
-            <button class="cerrar" onclick="cerrar('add-proceso','-dialogo')">X</button>
-            <h1>Añadir contenido</h1>
+            <button class="cerrar" onclick="cerrar('add-proceso','particiones')">X</button>
+            <h1>Añadir particion</h1>
 
-            <div class="box-select">
-                <label for="">Seleciona el contenido a crear</label>
-                <select name="tipo" id="tipo">
-                    <option value="" selected disabled>Seleciona el tipo</option>
-                    <option value="Memoria">Memoria</option>
-                    <option value="Proceso">Proceso</option>
-                </select>
+            <div class="formulario-modal">
+                <fieldset>
+                    <legend>Seleciona un tamaño</legend>
+                    <div>
+                        <input type="radio" id="size-process" value="1" checked name="particion">
+                        <label for="">1MB</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="size-process" value="2" name="particion">
+                        <label for="">2MB</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="size-process" value="3" name="particion">
+                        <label for="">3MB</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="size-process" value="4" name="particion">
+                        <label for="">4MB</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="size-process" value="5" name="particion">
+                        <label for="">5MB</label>
+                    </div>
+
+                </fieldset>
+                <button id="create" onclick="crearParticion()">OK!</button>
             </div>
+        </div>
+    </div>
+    <!-- MODAL PARA AÑADIR CONTENIDO -->
+    <div class="modal" id="procesos">
+        <div class="contenido" id="add-proceso">
+            <button class="cerrar" onclick="cerrar('add-proceso','procesos')">X</button>
+            <h1>Añadir proceso</h1>
 
             <div class="formulario-modal">
 
@@ -36,36 +64,56 @@
                     <input type="text" id="name-process" placeholder="Nombre">
                 </div>
 
-                <div class="grupo-input">
-                    <label for="">
-                        Tamaño
+                <fieldset>
+                    <legend>Seleciona un tamaño</legend>
+                    <div>
+                        <input type="radio" id="size-process" value="1" checked name="proceso">
+                        <label for="">1MB</label>
+                    </div>
 
-                    </label>
-                    <input type="number" id="size-process" placeholder="Tamaño" min="1" max="5">
-                </div>
+                    <div>
+                        <input type="radio" id="size-process" value="2" name="proceso">
+                        <label for="">2MB</label>
+                    </div>
 
-                <button id="create">OK!</button>
+                    <div>
+                        <input type="radio" id="size-process" value="3" name="proceso">
+                        <label for="">3MB</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="size-process" value="4" name="proceso">
+                        <label for="">4MB</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="size-process" value="5" name="proceso">
+                        <label for="">5MB</label>
+                    </div>
+
+                </fieldset>
+
+                <button id="create" onclick="crearProceso()">OK!</button>
             </div>
         </div>
     </div>
     <!-- MODAL SIMULADOR -->
-    <div class="contenedor-simulador">
+    <div class="modal" id="reubicacion">
         <div class="contenido" id="simulador">
-            <button class="cerrar" onclick="cerrar('simulador','-simulador')">X</button>
+            <button class="cerrar" onclick="cerrar('simulador','reubicacion')">X</button>
             <h1>Reubicacion</h1>
             <hr>
             <div class="partes-simulador">
                 <div class="lateral-izq">
-                    lateral izquierdo
+                    Memoria virtual
                     <div class="caja">
-                        <span>0</span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="centro">
                     central
                 </div>
                 <div class="lateral-drch">
-                    lateral derecho
+                    Memoria fisica
                     <div class="caja">
                         <span>0</span>
                     </div>
@@ -73,12 +121,71 @@
             </div>
         </div>
     </div>
+
     <!-- TOUR -->
-    <!--     <div class="container-tour">
-        <div class="instruciones" id="instrucion-1">
-                Este recuardo represnta los procesos y los tamñaos indicados arriba a la derecha a la izquierda se indica la cantidad de instruciones que tienes
+    <div class="container-tour">
+        <div>
+            <div class="cajaTitulo"><h1>Tour explicativo</h1></div>
+            <div class="instruciones " id="instrucion-1">
+                <h1>Procesos preparados</h1>
+                <span class="abajo"><</span>
+                <p>En este contenedor podras visualizar el nombre del proceso,su tamaño en MB a la derecha, y a la izquierda su tamaño en bits</p>
+                <div> <button onclick="siguiente(2)">Siguiente</button></div>
+                
+            </div>
+
+            <div class="instruciones " id="instrucion-2">
+                <span class="arriba"><</span>
+                <h1>Añadir procesos</h1>
+                Aqui podras añadir tantos procesos como quieras
+                <div><button onclick="siguiente(3)">Siguiente</button></div>
+                
+            </div>
+
+            <div class="instruciones " id="instrucion-3">
+                <span class="derecha"><</span>
+                <h1>Formulario añadir procesos</h1>
+                Deberas  seleccionar uno de los tamaños proporcionados y dar un nombre al proceso
+                <div><button onclick="siguiente(4)">Siguiente</button></div>
+            </div>
+
+            <div class="instruciones " id="instrucion-4">
+                <span class="abajo"><</span>
+                <h1>Particiones memoria</h1>
+                En este contenedor podras visualizar el tamaño de memoria en MB a la derecha, y a la izquierda su tamaño en bits
+                <div><button onclick="siguiente(5)">Siguiente</button></div>
+                
+            </div>
+
+            <div class="instruciones " id="instrucion-5">
+                <span class="arriba"><</span>
+                <h1>Añadir particiones de memoria</h1>
+                Aqui podras añadir tantos procesos como quieras
+                <div><button onclick="siguiente(6)">Siguiente</button></div>
+            </div>
+
+            <div class="instruciones " id="instrucion-6">
+                <span class="izquierda"><</span>
+                <h1>Formulario añadir procesos</h1>
+                Deberas  seleccionar uno de los tamaños proporcionados para la creacion de la particion de memoria
+                <div><button onclick="siguiente(7)">Siguiente</button></div>
+            </div>
+
+            <div class="instruciones " id="instrucion-7">
+                <span class="derecha"><</span>
+                <h1>Reubicacion</h1>
+                Simulador de procesos???
+                <div><button onclick="siguiente(0)">Siguiente</button></div>
+            </div>
+            
+            <button class="cerrar" onclick="siguiente(0)">X</button>
+
+            
         </div>
-    </div> -->
+
+
+    </div>
+
     <header>
         <h1 class="titulo ">--WEB INTERACTIVA DE SISTEMAS OPERATIVOS--</h1>
         <ul class="navigation">
@@ -98,36 +205,43 @@
         <!-- PROCESOS -->
         <div class="contenedor-procesos">
             <h1 class="titulo">Procesos preparados</h1>
-            <div class="procesos_preparados" id="procesos">
+            <div class="fondo">
+                <div class="procesos_preparados" id="procesos">
 
-                <div class="proceso size1" draggable="true" id="p1">
+                    <div class="proceso size1" draggable="true" id="p1">
 
-                    <div class="info-izq ">
-                        <span>
+                        <div class="info-izq ">
+                            <span>
 
-                        </span>
+                            </span>
 
+                        </div>
+                        <div class="nombre-proceso">
+                            <p>Chrome</p>
+                        </div>
                     </div>
+
+                    <div class="proceso size2" draggable="true" id="p2">
+                        <div class="info-izq">
+                            <span>
+
+                            </span>
+
+                        </div>
+
+                        <div class="nombre-proceso">
+                            <p>Chrome</p>
+                        </div>
+                    </div>
+
+
+
                 </div>
-
-                <div class="proceso size2" draggable="true" id="p2">
-                    <div class="info-izq ">
-                        <span>
-
-                        </span>
-
-                    </div>
-
-                    <div class="nombre-proceso">
-                        <p>Chrome</p>
-                    </div>
-                </div>
-
                 <div class="button-container">
-                    <button class="button" onclick="mostrarModal('add-proceso','-dialogo')" id="show-button">+</button>
+                    <button class="button" onclick="mostrarModal('add-proceso','procesos')" id="show-button">+</button>
                 </div>
-
             </div>
+
         </div>
         <!-- INSTRUCIONES -->
         <div class="contenedor-instruciones">
@@ -136,53 +250,63 @@
                 <span>32bits</span>
             </div>
             <div class="button-container">
-                <button class="button" onclick="mostrarModal('simulador','-simulador')">Simulador</button>
+                <button class="button" onclick="mostrarModal('simulador','reubicacion')">Simulador</button>
             </div>
 
         </div>
         <!-- PARTICIONES -->
         <div class="contenedor-particiones">
             <h1 class="titulo">Memoria principal</h1>
+            <div class="fondo">
+                <div class="mi_memoria" id="contenedor-memoria">
 
-            <div class="mi_memoria" id="contenedor-memoria">
-                <div class="particion size1 tooltip">
-                    <div class="info-izq fuera">
-                        <span>
+                    <div class="particion size1 tooltip">
+                        <div class="info-izq fuera">
+                            <span>
 
+                            </span>
+                        </div>
+                        <span class="tooltiptext_derecha">
+                            Memoria disponible: 1.5MB
                         </span>
+                        <div class="pestana-derecha"></div>
                     </div>
-                    <span class="tooltiptext_derecha">
-                        Memoria disponible: 1.5MB
-                    </span>
-                    <div class="pestana-derecha"></div>
-                </div>
 
-                <div class="particion size2 tooltip">
-                    <div class="info-izq fuera">
-                        <span>
+                    <div class="particion size2 tooltip">
+                        <div class="info-izq fuera">
+                            <span>
 
+                            </span>
+                        </div>
+                        <span class="tooltiptext_derecha">
+                            Memoria disponible: 1.5MB
                         </span>
+                        <div class="pestana-derecha"></div>
                     </div>
-                    <span class="tooltiptext_derecha">
-                        Memoria disponible: 1.5MB
-                    </span>
-                    <div class="pestana-derecha"></div>
+
                 </div>
-
-
+                <div class="button-container">
+                    <button class="button" onclick="mostrarModal('add-proceso','particiones')">+</button>
+                </div>
             </div>
 
-            <div class="button-container">
-                <button class="button" onclick="mostrarModal('add-proceso','-dialogo')">+</button>
-            </div>
         </div>
+
+
     </div>
+
+
     <!-- ALERT DE TAMAÑO -->
-    <div class="alerta">
+    <div class="alerta" id="tamano">
         <p>El proceso es demasiado grande</p>
+    </div>
+
+    <div class="alerta" id="ocupado">
+        <p>Solo puede haber un proceso en cada particion</p>
     </div>
     <script type="text/javascript" src="/js/drag.js"></script>
     <script type="text/javascript" src="/js/modals.js"></script>
+    <script type="text/javascript" src="/js/tour.js"></script>
 </body>
 
 </html>

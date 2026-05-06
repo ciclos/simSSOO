@@ -3,33 +3,19 @@
 
 .contenedor-procesos {
     width: var(--size_memmory);
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
-
-// en mi memoria le tooltip o en el contenedor de memoria
-.procesos_preparados {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    row-gap: 0.5rem;
-    background-color: var(--color-contenedor);
-    border-radius: var(--border-radius);
-    border: 5px dashed black;
-    //width: var(--size_memmory);
-    padding: 2rem;
-
+    margin: 1rem;
+    padding: 1rem;
 
     .button-container {
         text-align: center;
         width: 100%;
-        
+        padding: 1rem;
     }
 
 
     .button {
-        border-radius:var(--border-radius);
-        border:rgb(20, 20, 20) solid 2px;
+        border-radius: var(--border-radius);
+        border: rgb(20, 20, 20) solid 2px;
         background-color: var(--color-botones);
         width: 40px;
         height: 40px;
@@ -38,9 +24,30 @@
     }
 
     button:hover {
-        background-color:var(--color-hover);
+        background-color: var(--color-hover);
         transform: scale(1.1);
     }
+
+    .fondo {
+        background-color: var(--color-contenedor);
+        border-radius: var(--border-radius);
+        border: 2px solid black;
+    }
+}
+
+// en mi memoria le tooltip o en el contenedor de memoria
+.procesos_preparados {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    row-gap: 0.5rem;
+
+    //width: var(--size_memmory);
+    padding: 2rem;
+
+
+
+
 
 }
 
@@ -48,7 +55,8 @@
     align-items: center;
     border: rgb(20, 20, 20) solid 2px;
     width: 100%;
-    border-radius:var(--border-radius);;
+    border-radius: var(--border-radius);
+    ;
     background-color: var(--color-proceso);
 
 
@@ -56,17 +64,17 @@
     @each $name,
     $size in $sizes {
         &.#{$name} {
-            position: relative;
+            position: relative;// para que el absolute tenga este elemento como referencia
             height:calc(#{$size}*$min_h_process);
 
-            >.info-izq {
+            >.info-izq {// aplicamos esta clase solo a nuestro primer hijo respecto a cada proceso
                 position: relative;
                 top: 0;
                 width: 5rem;
-                
                 float: left;
-
-                span{
+                // contenedor que tendra el calculo de los bits en funcion del tamaño del proceso
+                span {
+                    // lo posicionamos a la izquierda y abajo de la caja padre info-izq
                     position: absolute;
                     left: 0;
                     bottom: 0;
@@ -79,34 +87,30 @@
                     &::after {
                         content: "#{ $size * 32768}";
                     }
-
                 }
 
                 &::after {
+                    // \A salto de linea por cada 3 puntos
                     content: "0\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...";
-                    display: block;
+                    display: block;// le indicamos que ocupe el ancho del padre
                     height:calc(#{$size}*$min_h_process - 0.5rem);
-                    overflow: hidden;
-                    white-space: pre;
+                    overflow: hidden;// le indicamos que NO sobresalga de la caja
+                    white-space: pre;// le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
                     padding: 0.2rem;
                     font-size: 0.8rem;
                 }
-
-
             }
-
-            .nombre-proceso{
+            .nombre-proceso {
                 display: flex;
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 justify-content: center;
                 align-items: center;
-            
-                p{
+
+                p {
                     text-align: center;
                 }
-                
             }
 
             &::after {

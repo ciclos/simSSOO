@@ -1,10 +1,10 @@
-.contenedor-dialogo {
+.modal {
     background-color: rgba(102, 95, 95, 0.5);
     width: 100vw;
     height: 100vh;
-    position: sticky;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 30;
     display: none;
     z-index: 100;
 
@@ -66,6 +66,8 @@
                 }
             }
 
+
+
             button {
                 display: block;
                 margin: 2rem auto 0;
@@ -75,105 +77,64 @@
                 border-radius: var(--border-radius);
                 cursor: pointer;
             }
+
+            input {
+                margin: 0.5rem;
+            }
         }
 
-
-    }
-
-}
-
-
-
-.contenedor-simulador {
-    background-color: rgba(102, 95, 95, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 100;
-
-    div.contenido {
-        width: 40vw;
-        text-align: center;
-        height: 70vh;
-        padding: 1.5rem;
-        border-radius: var(--border-radius);
-        background-color: var(--color-modal);
-        border: 2px solid black;
-        position: absolute;
-        left: 30%;
-        top: 10%;
-        margin: 1rem;
-
-        .partes-simulador{
-            display: flex;
-            justify-content: space-around;
+        .partes-simulador {
+            position: relative;
             padding: 0rem 1.5rem;
-
-            .caja {
-                padding: 1rem;
-                text-align: center;
-                border: 2px solid black;
-                width: 50%;
-                height: 100%;
-            }
+            text-align: center;
 
             .lateral-izq {
+                position: absolute;
+                text-align: center;
+                top: 1rem;
                 padding: 1rem;
+
+                .caja {
+                    padding: 1rem;
+                    border: 2px solid black;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    $numeros:"";
+                    @for $i from 0 through 10 {
+                        $numeros:$numeros+"#{$i*1}\A";
+                    }
+                    &::after {
+                        content: $numeros;
+                        display: block; // le indicamos que ocupe el ancho del padre
+                        overflow: hidden; // le indicamos que NO sobresalga de la caja
+                        white-space: pre; // le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
+                        }
+                }
+
             }
 
             .centro {
+                position: absolute;
                 padding: 1rem;
+                top: 1rem;
+                left: 45%;
             }
 
             .lateral-drch {
+                position: absolute;
+                right: 1%;
                 padding: 1rem;
+                top: 1rem;
+
+                .caja {
+                    padding: 1rem;
+                    border: 2px solid black;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
-
-
-
-
-        button.cerrar {
-            position: absolute;
-            left: 90%;
-            padding: 0.5rem;
-            background-color: var(--color-botones);
-            border: 2px solid black;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-        }
-
-
-
-
     }
 
 }
-
-
-/* .main-container {
-   display: flex;
-   justify-content: space-between;
-   padding: 0rem 1.5rem;
-
-   .caja {
-      padding: 1rem;
-      text-align: center;
-      border: 2px solid black;
-      width: 50%;
-      height: 100%;
-   }
-
-   .lateral-izq {
-      padding: 1rem;
-   }
-
-   .centro {
-      padding: 1rem;
-   }
-
-   .lateral-drch {}
-} */

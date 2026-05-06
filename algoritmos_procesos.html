@@ -24,14 +24,16 @@
         </ul>
     </header>
     <h1 class="titulo">ALGORITMOS</h1>
-    <div class="container-algoritmos">
+    <div class="container-principal">
+
         <div class="container-datos">
+            
             <table class="datos">
                 <thead>
                     <tr>
-                        <th >PROCESO</th>
-                        <th >LLEGADA</th>
-                        <th >DURACION</th>
+                        <th>PROCESO</th>
+                        <th>LLEGADA</th>
+                        <th>DURACION</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,24 +45,195 @@
 
                 </tbody>
             </table>
+
             <div class="button-container">
                 <button class="button" onclick="addRowDatos()">+</button>
             </div>
-            
+
         </div>
 
 
         <div class="container-algoritmos">
-            <table class="algoritmo">
+            <table class="algoritmo" id="fcfs">
                 <thead>
                     <tr>
-                        <th colspan="16">Titulo</th>
-                        <th>
+                        <th colspan="30">
+                            First come First serve
                             <div class="button-container">
-                                <button class="button" onclick="addColumn()">+</button>
+                                <button class="button" onclick="addColumn('fcfs')">+</button>
                             </div>
-                            
                         </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="algoritmo" id="sjf">
+                <thead>
+                    <tr>
+                        <th colspan="30">
+                            Short job first
+                            <div class="button-container">
+                                <button class="button" onclick="addColumn('sjf')">+</button>
+                            </div>
+                        </th>
+        
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="algoritmo" id="srjn">
+                <thead>
+                    <tr>
+                        <th colspan="30">
+                            Short remained job next
+                            <div class="button-container">
+                                <button class="button" onclick="addColumn('srjn')">+</button>
+                            </div>
+                        </th>
+        
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                        <td>1e</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="algoritmo" id="rr">
+                <thead>
+                    <tr>
+                        <th colspan="30">
+                            Round robin
+                            <div class="button-container">
+                                <button class="button" onclick="addColumn('rr')">+</button>
+                            </div>
+                        </th>
+        
+
+
                     </tr>
                 </thead>
                 <tbody>
@@ -105,6 +278,10 @@
                 </tbody>
             </table>
         </div>
+
+
+
+
 
     </div>
 
