@@ -30,7 +30,9 @@
 
     }
 
+
     .instruciones {
+
         border: 2px solid black;
         display: inline-block;
         position: absolute;
@@ -41,6 +43,10 @@
         padding: 1rem;
         display: none;
         //box-shadow:10px 5px 15px rgb(43, 43, 43) ;
+        transform: scale(0);
+        animation-name: aparecer;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
 
         span {
             display: block;

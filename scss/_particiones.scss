@@ -124,7 +124,7 @@
             border-radius: 0.3rem;
             
             &::after {
-              content: "#{ $size * 32768}"; //calculo de bits este contenido estara en el span
+              content: "#{ $size * $instruciones_x_mega}"; //calculo de bits este contenido estara en el span
             }
           }
         }

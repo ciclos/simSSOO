@@ -85,7 +85,7 @@
                     margin-bottom: 0.2rem;
 
                     &::after {
-                        content: "#{ $size * 32768}";
+                        content: "#{ $size * $instruciones_x_mega}";
                     }
                 }
 

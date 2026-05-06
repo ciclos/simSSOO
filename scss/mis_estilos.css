@@ -15,6 +15,31 @@
   --color-modal:rgb(165, 203, 223);
 }
 
+@keyframes entrada {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes aparecer {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .container-tour {
   background-color: rgba(102, 95, 95, 0.5);
   width: 100vw;
@@ -55,6 +80,10 @@
   text-align: justify;
   padding: 1rem;
   display: none;
+  transform: scale(0);
+  animation-name: aparecer;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 .container-tour .instruciones span {
   display: block;
@@ -1053,20 +1082,6 @@ table.datos tr {
   padding: 2rem;
 }
 
-@keyframes entrada {
-  0% {
-    transform: scale(0);
-  }
-  10% {
-    transform: scale(1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 .alerta {
   padding: 2rem;
   margin: 2rem;
