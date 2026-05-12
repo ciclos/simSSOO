@@ -62,7 +62,7 @@
     border-radius: var(--border-radius);
     background-color: var(--color-particion);
 
-
+    
     @each $name,
     $size in $sizes {
       &.#{$name} {
@@ -87,6 +87,7 @@
           &::after {
             content:"#{ $size * 1}MB"; // se genera el texto en funcion del tamaño de la particion 
             // posicionamiento del texto creado arriba a la derecha
+            //content: attr(data-size);
             position: absolute;
             padding: 0.2rem;
             right: 0.2rem;
@@ -106,15 +107,16 @@
 
           &::after {
             // \A salto de linea por cada 3 puntos
-            content: "0\A...\A...\A ...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...";
+            //content: "0\A...\A...\A ...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...\A...";
+            content: attr(data-size);
             display: block; // le indicamos que ocupe el ancho del padre
             height:calc(#{$size}*$min_h_process);
             overflow: hidden;// le indicamos que NO sobresalga de la caja
             white-space: pre;// le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
-
+            font-size: 0.8rem;
           }
 
-           span { // contenedor que tendra el calculo de los bits en funcion del tamaño de la memoria
+          span { // contenedor que tendra el calculo de los bits en funcion del tamaño de la memoria
             position: absolute;
             // lo posicionamos a la izquierda y abajo de la caja padre info-izq
             left: 0;
@@ -123,9 +125,9 @@
             background-color: var(--color-contenedor);
             border-radius: 0.3rem;
             
-            &::after {
+            /* &::after {
               content: "#{ $size * $instruciones_x_mega}"; //calculo de bits este contenido estara en el span
-            }
+            } */
           }
         }
 

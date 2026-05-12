@@ -58,6 +58,8 @@
             <div class="formulario-modal">
 
                 <div class="grupo-input">
+
+                    
                     <label for="">
                         Nombre
 
@@ -97,7 +99,7 @@
             </div>
         </div>
     </div>
-    <!-- MODAL SIMULADOR -->
+    <!-- MODAL REUBICACION-->
     <div class="modal" id="reubicacion">
         <div class="contenido" id="simulador">
             <button class="cerrar" onclick="cerrar('simulador','reubicacion')">X</button>
@@ -111,7 +113,14 @@
                     </div>
                 </div>
                 <div class="centro">
-                    central
+                    <div class="input">
+                        <label for="">Memoria virtual</label>
+                        <input type="number" name="" id="" min="1" max="5">
+                    </div>
+                            
+                   
+                    
+                    
                 </div>
                 <div class="lateral-drch">
                     Memoria fisica
@@ -126,7 +135,7 @@
     <!-- TOUR -->
     <div class="container-tour">
         <div>
-            <div class="cajaTitulo"><h1>Tour explicativo</h1></div>
+            <!-- <div class="cajaTitulo"><h1>Tour explicativo</h1></div> -->
             <div class="instruciones " id="instrucion-1">
                 <h1>Procesos preparados</h1>
                 <span class="abajo"><</span>
@@ -173,12 +182,29 @@
             </div>
 
             <div class="instruciones " id="instrucion-7">
+                <span class="arriba"><</span>
+                <h1>Mover procesos</h1>
+                <p>Si pinchas un proceso podras arrastralo y soltarlo en una particion de la memoria principal</p>
+                <div><button onclick="siguiente(8)">Siguiente</button></div>
+            </div>
+            <div class="instruciones " id="instrucion-8">
+                <span class="arriba"><</span>
+                <h1>Proceso añadido</h1>
+                <p>Si pinchas en el proceso añadido podras visualizar su...</p>
+            
+                <div><button onclick="siguiente(9)">Siguiente</button></div>
+                
+            </div>
+
+            <div class="instruciones " id="instrucion-9">
                 <span class="derecha"><</span>
                 <h1>Reubicacion</h1>
-                Simulador de procesos???
-                <div><button onclick="siguiente(0)">Siguiente</button></div>
-            </div>
+                <p>Reubicacion</p>
             
+                <div><button onclick="siguiente(0)">Siguiente</button></div>
+                
+            </div>
+
             <button class="cerrar" onclick="siguiente(0)">X</button>
 
             
@@ -222,6 +248,7 @@
                         </div>
                     </div>
 
+
                     <div class="proceso size2" draggable="true" id="p2">
                         <div class="info-izq">
                             <span>
@@ -235,6 +262,19 @@
                         </div>
                     </div>
 
+
+                    <div class="proceso size2 container-animacion" draggable="true" id="p1">
+
+                        <div class="info-izq ">
+                            <span>
+
+                            </span>
+
+                        </div>
+                        <div class="nombre-proceso">
+                            <p>Chrome</p>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -261,7 +301,7 @@
             <div class="fondo">
                 <div class="mi_memoria" id="contenedor-memoria">
 
-                    <div class="particion size1 tooltip">
+                    <div class="particion size1 tooltip" >
                         <div class="info-izq fuera">
                             <span>
 
@@ -270,19 +310,31 @@
                         <span class="tooltiptext_derecha">
                             Memoria disponible: 1.5MB
                         </span>
-                        <div class="pestana-derecha"></div>
+                        <div class="pestana-derecha" data-size="1MB"></div>
                     </div>
 
-                    <div class="particion size2 tooltip">
+                    <div class="particion size3 tooltip"  >
                         <div class="info-izq fuera">
                             <span>
 
                             </span>
                         </div>
+                        <div class="proceso size2 animacion-click" draggable="true" id="p1">
+
+                        <div class="info-izq ">
+                            <span>
+
+                            </span>
+
+                        </div>
+                        <div class="nombre-proceso">
+                            <p>Chrome</p>
+                        </div>
+                    </div>
                         <span class="tooltiptext_derecha">
                             Memoria disponible: 1.5MB
                         </span>
-                        <div class="pestana-derecha"></div>
+                        <div class="pestana-derecha" data-size="2MB"></div>
                     </div>
 
                 </div>

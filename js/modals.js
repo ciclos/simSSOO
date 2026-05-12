@@ -57,6 +57,7 @@ function crearParticion() {
         spanTooltip.textContent = `Memoria disponible ${tam}MB`;
 
         let pestañaDerecha = document.createElement("div");
+        pestañaDerecha.setAttribute("data-size",tam+"MB");
         pestañaDerecha.classList.add("pestana-derecha");
 
 
@@ -66,6 +67,8 @@ function crearParticion() {
         contenedorParticiones.appendChild(particionCreada);
         eventosParticiones();
         cerrar("add-proceso", "particiones");
+
+        reubicacion();
 }
 
 

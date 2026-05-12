@@ -1,14 +1,105 @@
-@keyframes entrada{
-    0%{ transform: scale(0);}
-    10%{ transform: scale(1);}
-    90%{ transform: scale(1);}
-    100%{
+@keyframes entrada {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    90% {
+        transform: scale(1);
+    }
+
+    100% {
         transform: scale(0);
     }
 }
-@keyframes aparecer{
-    0%{ transform: scale(0);}
-    10%{ transform: scale(1);}
-    100%{ transform: scale(1);}
-    
+
+@keyframes aparecer {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
 }
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.pop {
+    animation-name: pop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+   /*  25%{
+        transform: scale(1.02);
+    }
+    
+    75%{
+        transform: scale(1.06);
+    } */
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animacion-click {
+    animation-name: click;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+    display:none;
+}
+
+@keyframes drag-animation {
+        0% {
+            left: 0px;
+            bottom: 0px;
+        }
+        
+
+        100% {
+            left:525px;
+            bottom:200px;
+        }
+    }
+
+    .container-animacion {
+        display:none;
+        animation-name: drag-animation;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite; 
+    }

@@ -85,22 +85,35 @@ function addRow(tablaId){
 
             filaTiempos.cells[index].addEventListener('click',()=>{
                 filaTiempos.cells[index].innerText="E";
+                filaTiempos.cells[index].classList.remove("pop");
+                void filaTiempos.cells[index].offsetWidth;
+                filaTiempos.cells[index].classList.add("pop");
+            
+            });
+
+            filaTiempos.cells[index].addEventListener('dblclick',()=>{
+                filaTiempos.cells[index].innerText="X";
+                filaTiempos.cells[index].classList.remove("pop");
+                void filaTiempos.cells[index].offsetWidth;
+                filaTiempos.cells[index].classList.add("pop");
                 
             });
-            filaTiempos.cells[index].addEventListener('dblclick',()=>{
-                filaTiempos.cells[index].innerText="-";
+
+            filaTiempos.cells[index].addEventListener('contextmenu',()=>{
+                filaTiempos.cells[index].innerText="";
+
                 
             });
 
         }
-         filaTiempos.cells[0].innerHTML=letrasProcesos[countProcesos];
+        filaTiempos.cells[0].innerHTML=letrasProcesos[countProcesos];
         elementoAlgo.appendChild(filaTiempos);
 
         
 }
 
 function addRowDatos(){
-    countProcesos++;
+    
 
      let elementoTbody=document.querySelector("table.datos tbody");
      let fila=document.createElement('tr');
@@ -109,12 +122,15 @@ function addRowDatos(){
             fila.appendChild(document.createElement('td'));
         }
         fila.cells[0].innerHTML=letrasProcesos[countProcesos];
+
         elementoTbody.appendChild(fila);
     
     addRow("fcfs");
     addRow("sjf");
     addRow("srjn");
     addRow("rr");
+
+    countProcesos++;
 }
 
 

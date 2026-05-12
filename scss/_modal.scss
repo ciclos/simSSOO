@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 30;
-    display: none;
+    display: block;
     z-index: 100;
 
     div.contenido {
@@ -85,14 +85,12 @@
 
         .partes-simulador {
             position: relative;
-            padding: 0rem 1.5rem;
             text-align: center;
 
             .lateral-izq {
                 position: absolute;
-                text-align: center;
                 top: 1rem;
-                padding: 1rem;
+                padding: 0.5rem;
 
                 .caja {
                     padding: 1rem;
@@ -101,14 +99,14 @@
                     height: 100%;
                     position: relative;
                     $numeros:"";
-                    @for $i from 0 through 10 {
+                    @for $i from 0 through 5 {
                         $numeros:$numeros+"#{$i*1}\A";
                     }
                     &::after {
                         content: $numeros;
-                        display: block; // le indicamos que ocupe el ancho del padre
-                        overflow: hidden; // le indicamos que NO sobresalga de la caja
-                        white-space: pre; // le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
+                            display: block; // le indicamos que ocupe el ancho del padre
+                            overflow: hidden; // le indicamos que NO sobresalga de la caja
+                            white-space: pre; // le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
                         }
                 }
 
@@ -116,15 +114,23 @@
 
             .centro {
                 position: absolute;
-                padding: 1rem;
-                top: 1rem;
-                left: 45%;
+                padding: 0.5rem;
+                top: 3rem;
+                left: 40%;
+    
+                .input{
+                    label{
+                        display: block;
+                    }
+                }
+                
+            
             }
 
             .lateral-drch {
                 position: absolute;
                 right: 1%;
-                padding: 1rem;
+                padding: 0.5rem;
                 top: 1rem;
 
                 .caja {
