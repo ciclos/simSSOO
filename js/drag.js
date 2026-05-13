@@ -34,8 +34,9 @@ function eventosParticiones(){
                     }else{
                         // si no hay ningun proceso la añadimos
                         this.appendChild(proceso);
+                        proceso.setAttribute("onclick","mostrarModal('simulador','reubicacion')");
                         //calculamos el espacio restante disponible en la memoria y se lo asignamos al tooltip
-                        this.querySelector(".tooltiptext_derecha").innerHTML="Memoria disponible: "+tam/50+" MB";
+                        this.querySelector(".tooltiptext_arriba").innerHTML="Memoria disponible: "+tam/50+" MB";
 
                     }
                 } 
@@ -88,7 +89,7 @@ function addRow(tablaId){
                 filaTiempos.cells[index].classList.remove("pop");
                 void filaTiempos.cells[index].offsetWidth;
                 filaTiempos.cells[index].classList.add("pop");
-            
+
             });
 
             filaTiempos.cells[index].addEventListener('dblclick',()=>{

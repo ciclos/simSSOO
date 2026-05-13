@@ -111,21 +111,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: block;
   z-index: 100;
-}
-.container-tour .cajaTitulo {
-  padding: 5rem;
-  position: relative;
-  text-align: center;
-}
-.container-tour .cajaTitulo h1 {
-  position: absolute;
-  border-radius: 1rem;
-  left: 40%;
-  max-width: 500px;
-  min-width: 400px;
-  background-color: antiquewhite;
 }
 .container-tour .cerrar {
   position: absolute;
@@ -226,10 +213,8 @@
 .container-tour #instrucion-8 {
   top: 570px;
   right: 100px;
-  display: block;
 }
 .container-tour #instrucion-9 {
-  display: block;
   left: 200px;
   top: 300px;
 }
@@ -276,7 +261,7 @@
   position: fixed;
   top: 0;
   left: 30;
-  display: block;
+  display: none;
   z-index: 100;
 }
 .modal div.contenido {
@@ -367,9 +352,13 @@
   position: absolute;
   padding: 0.5rem;
   top: 3rem;
-  left: 40%;
+  left: 35%;
 }
-.modal div.contenido .partes-simulador .centro .input label {
+.modal div.contenido .partes-simulador .centro input {
+  display: block;
+  width: 100%;
+}
+.modal div.contenido .partes-simulador .centro input label {
   display: block;
 }
 .modal div.contenido .partes-simulador .lateral-drch {
@@ -407,34 +396,61 @@ body {
   position: relative;
 }
 
-.tooltip .tooltiptext_derecha {
-  visibility: hidden;
+/* POSICIONAMINENTO TOOLTIP */
+.tooltip .tooltiptext_arriba {
+  /*  visibility: hidden;
   width: 160px;
-  background-color: var(--color-toltip);
+  background-color:var(--color-toltip);
   color: #0f0f0f;
   text-align: center;
   border-radius: 6px;
   padding: 5px;
+
   position: absolute;
   top: 50%;
   left: 105%;
+
   margin-top: -15px;
+  opacity: 0;
+  transition: opacity 0.3s; */
+  visibility: hidden;
+  background-color: var(--color-toltip);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 32%;
+  margin-left: -60px;
+  top: 100%;
+  width: 80%;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.tooltip .tooltiptext_derecha::after {
-  content: "";
+/*-- Punta del bocadillo */
+.tooltip .tooltiptext_arriba::after {
+  /* content: "";
   position: absolute;
   top: 50%;
   right: 100%;
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent var(--color-toltip) transparent transparent;
+  border-color: transparent  transparent transparent; */
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--color-toltip) transparent;
 }
 
-.tooltip:hover .tooltiptext_derecha {
+/*-- Disparador del tooltip*/
+.tooltip:hover .tooltiptext_arriba {
   visibility: visible;
   opacity: 1;
 }

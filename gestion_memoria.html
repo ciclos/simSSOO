@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/mis_estilos.css" .css">
     <title>Document</title>
-    
+
 </head>
 
 <body>
@@ -59,7 +59,7 @@
 
                 <div class="grupo-input">
 
-                    
+
                     <label for="">
                         Nombre
 
@@ -113,14 +113,11 @@
                     </div>
                 </div>
                 <div class="centro">
-                    <div class="input">
-                        <label for="">Memoria virtual</label>
-                        <input type="number" name="" id="" min="1" max="5">
-                    </div>
-                            
-                   
-                    
-                    
+                    <label for="">Memoria virtual</label>
+                    <input type="text" name="" id="input-mv">
+
+                    <span id="nombre"></span>
+
                 </div>
                 <div class="lateral-drch">
                     Memoria fisica
@@ -134,84 +131,89 @@
 
     <!-- TOUR -->
     <div class="container-tour">
-        <div>
-            <!-- <div class="cajaTitulo"><h1>Tour explicativo</h1></div> -->
-            <div class="instruciones " id="instrucion-1">
-                <h1>Procesos preparados</h1>
-                <span class="abajo"><</span>
-                <p>En este contenedor podras visualizar el nombre del proceso,su tamaño en MB a la derecha, y a la izquierda su tamaño en bits</p>
-                <div> <button onclick="siguiente(2)">Siguiente</button></div>
-                
-            </div>
 
-            <div class="instruciones " id="instrucion-2">
-                <span class="arriba"><</span>
-                <h1>Añadir procesos</h1>
-                Aqui podras añadir tantos procesos como quieras
-                <div><button onclick="siguiente(3)">Siguiente</button></div>
-                
-            </div>
+        <!-- <div class="cajaTitulo"><h1>Tour explicativo</h1></div> -->
+        <div class="instruciones " id="instrucion-1">
+            <h1>Procesos preparados</h1>
+            <span class="abajo">
+                < </span>
+                    En este contenedor podras visualizar el nombre del proceso,su tamaño en MB a la derecha, y a
+                    la izquierda su tamaño en bits
+                    <div> <button onclick="siguiente(2)">Siguiente</button></div>
 
-            <div class="instruciones " id="instrucion-3">
-                <span class="derecha"><</span>
-                <h1>Formulario añadir procesos</h1>
-                Deberas  seleccionar uno de los tamaños proporcionados y dar un nombre al proceso
-                <div><button onclick="siguiente(4)">Siguiente</button></div>
-            </div>
-
-            <div class="instruciones " id="instrucion-4">
-                <span class="abajo"><</span>
-                <h1>Particiones memoria</h1>
-                En este contenedor podras visualizar el tamaño de memoria en MB a la derecha, y a la izquierda su tamaño en bits
-                <div><button onclick="siguiente(5)">Siguiente</button></div>
-                
-            </div>
-
-            <div class="instruciones " id="instrucion-5">
-                <span class="arriba"><</span>
-                <h1>Añadir particiones de memoria</h1>
-                Aqui podras añadir tantos procesos como quieras
-                <div><button onclick="siguiente(6)">Siguiente</button></div>
-            </div>
-
-            <div class="instruciones " id="instrucion-6">
-                <span class="izquierda"><</span>
-                <h1>Formulario añadir procesos</h1>
-                Deberas  seleccionar uno de los tamaños proporcionados para la creacion de la particion de memoria
-                <div><button onclick="siguiente(7)">Siguiente</button></div>
-            </div>
-
-            <div class="instruciones " id="instrucion-7">
-                <span class="arriba"><</span>
-                <h1>Mover procesos</h1>
-                <p>Si pinchas un proceso podras arrastralo y soltarlo en una particion de la memoria principal</p>
-                <div><button onclick="siguiente(8)">Siguiente</button></div>
-            </div>
-            <div class="instruciones " id="instrucion-8">
-                <span class="arriba"><</span>
-                <h1>Proceso añadido</h1>
-                <p>Si pinchas en el proceso añadido podras visualizar su...</p>
-            
-                <div><button onclick="siguiente(9)">Siguiente</button></div>
-                
-            </div>
-
-            <div class="instruciones " id="instrucion-9">
-                <span class="derecha"><</span>
-                <h1>Reubicacion</h1>
-                <p>Reubicacion</p>
-            
-                <div><button onclick="siguiente(0)">Siguiente</button></div>
-                
-            </div>
-
-            <button class="cerrar" onclick="siguiente(0)">X</button>
-
-            
         </div>
+
+        <div class="instruciones " id="instrucion-2">
+            <span class="arriba">
+                < </span>
+                    <h1>Añadir procesos</h1>
+                    Aqui podras añadir tantos procesos como quieras
+                    <div><button onclick="siguiente(3)">Siguiente</button></div>
+
+        </div>
+
+        <div class="instruciones " id="instrucion-3">
+            <span class="derecha">
+                < </span>
+                    <h1>Formulario añadir procesos</h1>
+                    Deberas seleccionar uno de los tamaños proporcionados y dar un nombre al proceso
+                    <div><button onclick="siguiente(4)">Siguiente</button></div>
+        </div>
+
+        <div class="instruciones " id="instrucion-4">
+            <span class="abajo">
+                < </span>
+                    <h1>Particiones memoria</h1>
+                    En este contenedor podras visualizar el tamaño de memoria en MB a la derecha, y a la izquierda
+                    su tamaño en bits
+                    <div><button onclick="siguiente(5)">Siguiente</button></div>
+        </div>
+
+        <div class="instruciones " id="instrucion-5">
+            <span class="arriba"><</span>
+                    <h1>Añadir particiones de memoria</h1>
+                    Aqui podras añadir tantos procesos como quieras
+                    <div><button onclick="siguiente(6)">Siguiente</button></div>
+        </div>
+
+        <div class="instruciones " id="instrucion-6">
+            <span class="izquierda">< </span>
+                    <h1>Formulario añadir procesos</h1>
+                    Deberas seleccionar uno de los tamaños proporcionados para la creacion de la particion de
+                    memoria
+                    <div><button onclick="siguiente(7)">Siguiente</button></div>
+        </div>
+
+        <div class="instruciones " id="instrucion-7">
+            <span class="arriba"> < </span>
+                    <h1>Mover procesos</h1>
+                    <p>Si pinchas un proceso podras arrastralo y soltarlo en una particion de la memoria principal
+                    </p>
+                    <div><button onclick="siguiente(8)">Siguiente</button></div>
+        </div>
+        <div class="instruciones " id="instrucion-8">
+            <span class="arriba">< </span>
+                    <h1>Proceso añadido</h1>
+                    <p>Si pinchas en el proceso añadido podras visualizar su...</p>
+
+                    <div><button onclick="siguiente(9)">Siguiente</button></div>
+        </div>
+
+        <div class="instruciones " id="instrucion-9">
+            <span class="derecha"> < </span>
+                    <h1>Reubicacion</h1>
+                    <p>Reubicacion</p>
+
+                    <div><button onclick="siguiente(0)">Siguiente</button></div>
+        </div>
+
+        <button class="cerrar" onclick="siguiente(0)">X</button>
 
 
     </div>
+
+
+
 
     <header>
         <h1 class="titulo ">--WEB INTERACTIVA DE SISTEMAS OPERATIVOS--</h1>
@@ -290,9 +292,9 @@
             <div class="instruciones">
                 <span>32bits</span>
             </div>
-            <div class="button-container">
+            <!-- <div class="button-container">
                 <button class="button" onclick="mostrarModal('simulador','reubicacion')">Simulador</button>
-            </div>
+            </div> -->
 
         </div>
         <!-- PARTICIONES -->
@@ -301,19 +303,19 @@
             <div class="fondo">
                 <div class="mi_memoria" id="contenedor-memoria">
 
-                    <div class="particion size1 tooltip" >
+                    <div class="particion size1 tooltip">
                         <div class="info-izq fuera">
                             <span>
 
                             </span>
                         </div>
-                        <span class="tooltiptext_derecha">
+                        <span class="tooltiptext_arriba">
                             Memoria disponible: 1.5MB
                         </span>
                         <div class="pestana-derecha" data-size="1MB"></div>
                     </div>
 
-                    <div class="particion size3 tooltip"  >
+                    <div class="particion size3 tooltip">
                         <div class="info-izq fuera">
                             <span>
 
@@ -321,17 +323,17 @@
                         </div>
                         <div class="proceso size2 animacion-click" draggable="true" id="p1">
 
-                        <div class="info-izq ">
-                            <span>
+                            <div class="info-izq ">
+                                <span>
 
-                            </span>
+                                </span>
 
+                            </div>
+                            <div class="nombre-proceso">
+                                <p>Chrome</p>
+                            </div>
                         </div>
-                        <div class="nombre-proceso">
-                            <p>Chrome</p>
-                        </div>
-                    </div>
-                        <span class="tooltiptext_derecha">
+                        <span class="tooltiptext_arriba">
                             Memoria disponible: 1.5MB
                         </span>
                         <div class="pestana-derecha" data-size="2MB"></div>

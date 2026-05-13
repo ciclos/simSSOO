@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 30;
-    display: block;
+    display: none;
     z-index: 100;
 
     div.contenido {
@@ -116,13 +116,16 @@
                 position: absolute;
                 padding: 0.5rem;
                 top: 3rem;
-                left: 40%;
+                left: 35%;
     
-                .input{
+                input{
+                    display: block;
+                    width: 100%; 
                     label{
                         display: block;
                     }
                 }
+
                 
             
             }
