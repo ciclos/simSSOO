@@ -14,15 +14,19 @@ function reubicacion() {
         let size=valueAfter.slice(1,2);
     
         particion.querySelector(".info-izq").setAttribute("data-size",inicio+puntitos);
+        particion.setAttribute("data-registro-base",inicio);
+        
         fin= (size*instruciones_x_mega)+inicio-1;
         particion.querySelector(".info-izq span").innerHTML=fin;
         
-        console.log(document.querySelector(".proceso"));
-        if(particion.querySelector(".proceso")){
-            particion.querySelector(".proceso").addEventListener('click',function(){
+    
 
-                document.querySelector("#input-mv").value=inicio;
-                document.querySelector("#nombre").innerHTML=document.querySelector(".proceso .nombre-proceso p").textContent;;
+        if(particion.querySelector(".proceso")){
+            
+            particion.querySelector(".proceso").addEventListener('click',function(){
+                console.log("entra....???");
+                mostrarModal('simulador','reubicacion');
+               
                 
             });
         }

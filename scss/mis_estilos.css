@@ -91,17 +91,22 @@
     left: 0px;
     bottom: 0px;
   }
-  100% {
+  80% {
     left: 525px;
     bottom: 200px;
   }
+  100% {
+    left: 900px;
+    bottom: 100px;
+  }
 }
 .container-animacion {
+  z-index: 100;
   display: none;
   animation-name: drag-animation;
   animation-timing-function: ease-in-out;
   animation-duration: 2.5s;
-  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .container-tour {
@@ -326,52 +331,27 @@
 .modal div.contenido .formulario-modal input {
   margin: 0.5rem;
 }
-.modal div.contenido .partes-simulador {
-  position: relative;
+.modal div.contenido table {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  border: 2px solid black;
+  padding: 0;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.modal div.contenido table th,
+.modal div.contenido table td {
+  margin: 0;
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border: 2px solid black;
   text-align: center;
 }
-.modal div.contenido .partes-simulador .lateral-izq {
-  position: absolute;
-  top: 1rem;
-  padding: 0.5rem;
-}
-.modal div.contenido .partes-simulador .lateral-izq .caja {
-  padding: 1rem;
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.modal div.contenido .partes-simulador .lateral-izq .caja::after {
-  content: "0\a 1\a 2\a 3\a 4\a 5\a";
-  display: block;
-  overflow: hidden;
-  white-space: pre;
-}
-.modal div.contenido .partes-simulador .centro {
-  position: absolute;
-  padding: 0.5rem;
-  top: 3rem;
-  left: 35%;
-}
-.modal div.contenido .partes-simulador .centro input {
-  display: block;
-  width: 100%;
-}
-.modal div.contenido .partes-simulador .centro input label {
-  display: block;
-}
-.modal div.contenido .partes-simulador .lateral-drch {
-  position: absolute;
-  right: 1%;
-  padding: 0.5rem;
-  top: 1rem;
-}
-.modal div.contenido .partes-simulador .lateral-drch .caja {
-  padding: 1rem;
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
+.modal div.contenido table tr {
+  padding: 0;
 }
 
 * {

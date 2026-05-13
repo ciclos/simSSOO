@@ -81,69 +81,38 @@
             input {
                 margin: 0.5rem;
             }
-        }
 
-        .partes-simulador {
-            position: relative;
-            text-align: center;
-
-            .lateral-izq {
-                position: absolute;
-                top: 1rem;
-                padding: 0.5rem;
-
-                .caja {
-                    padding: 1rem;
-                    border: 2px solid black;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    $numeros:"";
-                    @for $i from 0 through 5 {
-                        $numeros:$numeros+"#{$i*1}\A";
-                    }
-                    &::after {
-                        content: $numeros;
-                            display: block; // le indicamos que ocupe el ancho del padre
-                            overflow: hidden; // le indicamos que NO sobresalga de la caja
-                            white-space: pre; // le indicamos que respete los espacios en blanco y salts de linea que tenemos en el content
-                        }
-                }
-
-            }
-
-            .centro {
-                position: absolute;
-                padding: 0.5rem;
-                top: 3rem;
-                left: 35%;
-    
-                input{
-                    display: block;
-                    width: 100%; 
-                    label{
-                        display: block;
-                    }
-                }
-
-                
             
-            }
+        }
 
-            .lateral-drch {
+
+        table {
                 position: absolute;
-                right: 1%;
-                padding: 0.5rem;
-                top: 1rem;
+                top: 10rem;
+                left: 10rem;
+                border: 2px solid black;
+                padding: 0;
+                border-collapse: collapse;
+                font-size: 1rem;
 
-                .caja {
-                    padding: 1rem;
+                th,
+                td {
+                    margin: 0;
+                    padding: 0.5rem;
+                    width: 2rem;
+                    height: 2rem;
+                    text-align: center;
                     border: 2px solid black;
-                    width: 100%;
-                    height: 100%;
+                    text-align: center;
+                }
+
+                tr {
+                    padding: 0;
+
                 }
             }
-        }
+
+
     }
 
 }

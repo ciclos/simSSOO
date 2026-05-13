@@ -90,16 +90,25 @@
         }
         
 
-        100% {
+
+        80% {
             left:525px;
             bottom:200px;
+        }
+
+        100%{
+            left:900px;
+            bottom:100px;
         }
     }
 
     .container-animacion {
+        z-index: 100;
         display:none;
         animation-name: drag-animation;
         animation-timing-function: ease-in-out;
         animation-duration: 2.5s;
-        animation-iteration-count: infinite; 
+
+        animation-fill-mode: forwards;
+        //animation-iteration-count: infinite; 
     }

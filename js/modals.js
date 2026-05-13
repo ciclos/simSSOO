@@ -1,15 +1,37 @@
 
-let cantidadProcesos=2;
-function mostrarModal(id, modal) {
+let cantidadProcesos=3;
+function mostrarModal(modal) {
     document.querySelector('#' + modal).style.display = 'block';
 
     document.body.style.overflow = 'hidden';
 }
 
-function cerrar(id, modal) {
+function mostrarReubicacion(particion) {
+    
+        let registroBase=particion.getAttribute("data-registro-base");
+        document.querySelector("#registro-base").innerHTML=registroBase;
+        let input= document.querySelector("#input-mv");
+        let suma=0;
+        input.addEventListener("change",function(){
+            suma=parseInt(registroBase)+parseInt(input.value);
+            document.querySelector("#resultado").innerHTML=suma;
+
+            document.querySelector("#celda-resultado").classList.remove("pop");
+            void document.querySelector("#celda-resultado").offsetWidth;
+            document.querySelector("#celda-resultado").classList.add("pop");
+        })
+
+        
+/*     
+    document.querySelector("#nombre").innerHTML=document.querySelector(".proceso .nombre-proceso p").textContent; */
+    mostrarModal("reubicacion");
+}
+
+function cerrar(modal) {
     document.querySelector('#' + modal).style.display = 'none';
     document.body.style.overflow = 'visible';
 }
+
 function crearProceso() {
     cantidadProcesos++;
     let contenedorProcesos = document.querySelector(".procesos_preparados");
@@ -38,8 +60,9 @@ function crearProceso() {
                 event.dataTransfer.setData("text", event.target.id);
             });
     document.getElementById("name-process").value = "";
-    cerrar("add-proceso", "procesos");
+    cerrar("procesos");
 }
+
 function crearParticion() {
 
         const tam = document.querySelector('input[name="particion"]:checked').value;
@@ -53,7 +76,7 @@ function crearParticion() {
         infoIzquierda.appendChild(document.createElement("span"));
 
         let spanTooltip = document.createElement("span");
-        spanTooltip.classList.add("tooltiptext_derecha");
+        spanTooltip.classList.add("tooltiptext_arriba");
         spanTooltip.textContent = `Memoria disponible ${tam}MB`;
 
         let pestañaDerecha = document.createElement("div");
@@ -66,11 +89,12 @@ function crearParticion() {
         particionCreada.appendChild(pestañaDerecha);
         contenedorParticiones.appendChild(particionCreada);
         eventosParticiones();
-        cerrar("add-proceso", "particiones");
+        cerrar("particiones");
 
         reubicacion();
 }
 
+/* id para particiones para modal hacer */
 
 
 

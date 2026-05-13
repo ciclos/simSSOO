@@ -34,7 +34,8 @@ function eventosParticiones(){
                     }else{
                         // si no hay ningun proceso la añadimos
                         this.appendChild(proceso);
-                        proceso.setAttribute("onclick","mostrarModal('simulador','reubicacion')");
+                        proceso.setAttribute("onclick",mostrarReubicacion(this));
+            
                         //calculamos el espacio restante disponible en la memoria y se lo asignamos al tooltip
                         this.querySelector(".tooltiptext_arriba").innerHTML="Memoria disponible: "+tam/50+" MB";
 

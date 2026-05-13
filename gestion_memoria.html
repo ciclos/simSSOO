@@ -14,7 +14,7 @@
     <!-- MODAL PARA AÑADIR CONTENIDO PARTICIONES -->
     <div class="modal" id="particiones">
         <div class="contenido" id="add-proceso">
-            <button class="cerrar" onclick="cerrar('add-proceso','particiones')">X</button>
+            <button class="cerrar" onclick="cerrar('particiones')">X</button>
             <h1>Añadir particion</h1>
 
             <div class="formulario-modal">
@@ -52,7 +52,7 @@
     <!-- MODAL PARA AÑADIR CONTENIDO -->
     <div class="modal" id="procesos">
         <div class="contenido" id="add-proceso">
-            <button class="cerrar" onclick="cerrar('add-proceso','procesos')">X</button>
+            <button class="cerrar" onclick="cerrar('procesos')">X</button>
             <h1>Añadir proceso</h1>
 
             <div class="formulario-modal">
@@ -102,30 +102,28 @@
     <!-- MODAL REUBICACION-->
     <div class="modal" id="reubicacion">
         <div class="contenido" id="simulador">
-            <button class="cerrar" onclick="cerrar('simulador','reubicacion')">X</button>
+            <button class="cerrar" onclick="cerrar('reubicacion')">X</button>
             <h1>Reubicacion</h1>
             <hr>
-            <div class="partes-simulador">
-                <div class="lateral-izq">
-                    Memoria virtual
-                    <div class="caja">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="centro">
-                    <label for="">Memoria virtual</label>
-                    <input type="text" name="" id="input-mv">
+            <h1>Calculadora</h1>
+            <table>
 
-                    <span id="nombre"></span>
+                <tbody>
+                    <tr>
+                        <td>Memoria Virtual</td>
+                        <td><input type="number" min="0" id="input-mv"></td>
+                    </tr>
+                    <tr>
+                        <td>Regsitro base</td>
+                        <td><span id="registro-base"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Memoria Fisica</td>
+                        <td id="celda-resultado"><span id="resultado"></span></td>
+                    </tr>
+                </tbody>
 
-                </div>
-                <div class="lateral-drch">
-                    Memoria fisica
-                    <div class="caja">
-                        <span>0</span>
-                    </div>
-                </div>
-            </div>
+            </table>
         </div>
     </div>
 
@@ -170,14 +168,16 @@
         </div>
 
         <div class="instruciones " id="instrucion-5">
-            <span class="arriba"><</span>
+            <span class="arriba">
+                << /span>
                     <h1>Añadir particiones de memoria</h1>
                     Aqui podras añadir tantos procesos como quieras
                     <div><button onclick="siguiente(6)">Siguiente</button></div>
         </div>
 
         <div class="instruciones " id="instrucion-6">
-            <span class="izquierda">< </span>
+            <span class="izquierda">
+                < </span>
                     <h1>Formulario añadir procesos</h1>
                     Deberas seleccionar uno de los tamaños proporcionados para la creacion de la particion de
                     memoria
@@ -185,14 +185,16 @@
         </div>
 
         <div class="instruciones " id="instrucion-7">
-            <span class="arriba"> < </span>
+            <span class="arriba">
+                < </span>
                     <h1>Mover procesos</h1>
                     <p>Si pinchas un proceso podras arrastralo y soltarlo en una particion de la memoria principal
                     </p>
                     <div><button onclick="siguiente(8)">Siguiente</button></div>
         </div>
         <div class="instruciones " id="instrucion-8">
-            <span class="arriba">< </span>
+            <span class="arriba">
+                < </span>
                     <h1>Proceso añadido</h1>
                     <p>Si pinchas en el proceso añadido podras visualizar su...</p>
 
@@ -200,7 +202,8 @@
         </div>
 
         <div class="instruciones " id="instrucion-9">
-            <span class="derecha"> < </span>
+            <span class="derecha">
+                < </span>
                     <h1>Reubicacion</h1>
                     <p>Reubicacion</p>
 
@@ -229,6 +232,7 @@
     </header>
 
     <h1 class="titulo">GESTION MEMORIA</h1>
+    <h2 class="titulo">Esquema de particiones fijas</h2>
 
     <div class="main-container">
         <!-- PROCESOS -->
@@ -265,7 +269,7 @@
                     </div>
 
 
-                    <div class="proceso size2 container-animacion" draggable="true" id="p1">
+                    <div class="proceso size2 container-animacion" draggable="true" id="p3">
 
                         <div class="info-izq ">
                             <span>
@@ -281,7 +285,7 @@
 
                 </div>
                 <div class="button-container">
-                    <button class="button" onclick="mostrarModal('add-proceso','procesos')" id="show-button">+</button>
+                    <button class="button" onclick="mostrarModal('procesos')" id="show-button">+</button>
                 </div>
             </div>
 
@@ -310,38 +314,27 @@
                             </span>
                         </div>
                         <span class="tooltiptext_arriba">
-                            Memoria disponible: 1.5MB
+                            Memoria disponible: 1MB
                         </span>
                         <div class="pestana-derecha" data-size="1MB"></div>
                     </div>
 
-                    <div class="particion size3 tooltip">
+                    <div class="particion size3 tooltip" id="particion-ejemplo">
                         <div class="info-izq fuera">
                             <span>
 
                             </span>
                         </div>
-                        <div class="proceso size2 animacion-click" draggable="true" id="p1">
 
-                            <div class="info-izq ">
-                                <span>
-
-                                </span>
-
-                            </div>
-                            <div class="nombre-proceso">
-                                <p>Chrome</p>
-                            </div>
-                        </div>
                         <span class="tooltiptext_arriba">
-                            Memoria disponible: 1.5MB
+                            Memoria disponible: 3MB
                         </span>
                         <div class="pestana-derecha" data-size="2MB"></div>
                     </div>
 
                 </div>
                 <div class="button-container">
-                    <button class="button" onclick="mostrarModal('add-proceso','particiones')">+</button>
+                    <button class="button" onclick="mostrarModal('particiones')">+</button>
                 </div>
             </div>
 
