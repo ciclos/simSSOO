@@ -1156,8 +1156,7 @@ table.datos tr {
 .container-principal .container-algoritmos {
   position: absolute;
   padding: 1rem;
-  width: 100%;
-  left: 40%;
+  left: 40rem;
 }
 
 .alerta {
