@@ -6,6 +6,7 @@ table.algoritmo {
     letter-spacing: 1px;
     font-size: 1rem;
     margin-bottom: 1rem;
+    //display: inline-block;
     
     th,
     td {
@@ -49,11 +50,7 @@ table.datos {
     position: relative;
     padding: 1rem;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-
+    
     .button-container {
         padding: 0.5rem;
         text-align: right;
@@ -75,20 +72,22 @@ table.datos {
     }
 
     .container-datos {
-        padding: 2rem;
-        background-color: aqua;
+        padding: 1rem;
+        position: absolute;
+        top: 6rem;
+        left: 6rem;
+        button{
+            width: 100%;
+        }   
         
     }
 
     .container-algoritmos {
-
-        display: flex;
-        flex-wrap:wrap;
-
-        justify-content: center;
+        position: absolute;
+        padding: 1rem;
         width: 100%;
-        padding: 2rem;
-
+        left: 40%;
+    
     }
 
 

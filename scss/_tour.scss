@@ -22,6 +22,7 @@
     .instruciones {
 
         border: 2px solid black;
+        border-radius: var(--border-radius);
         display: inline-block;
         position: absolute;
         background-color: aliceblue;
@@ -47,7 +48,7 @@
             text-align: center;
             border: 2px solid black;
             line-height: 1.75rem;
-            background-color: rgb(246, 246, 73);
+            background-color: rgb(253, 253, 23);
             //font:10pt Tahoma bold;
 
             &.arriba {
