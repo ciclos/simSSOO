@@ -125,6 +125,9 @@
   top: 1rem;
   padding: 0.5rem;
   font-size: 14pt;
+  background-color: var(--color-botones);
+  border: 2px solid black;
+  border-radius: var(--border-radius);
 }
 .container-tour .instruciones {
   border: 2px solid black;
@@ -163,7 +166,7 @@
 .container-tour .instruciones span.derecha {
   transform: rotate(180deg);
   left: 95%;
-  top: 35%;
+  top: 25%;
 }
 .container-tour .instruciones span.abajo {
   transform: rotate(-90deg);
@@ -186,6 +189,9 @@
   right: 0.2rem;
   padding: 0.2rem;
   border-radius: 0.2rem;
+  background-color: var(--color-botones);
+  border: 2px solid black;
+  border-radius: var(--border-radius);
 }
 .container-tour #instrucion-1 {
   top: 50px;

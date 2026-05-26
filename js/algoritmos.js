@@ -4,65 +4,70 @@
     y añadimos una linea nueva con tantos td como hayamos contado
 
 */
-const letrasProcesos=["A","B","C","D","E","F"];
-let countProcesos=0;
+const letrasProcesos = ["A", "B", "C", "D", "E", "F"];
+let countProcesos = 0;
 
-function addRow(tablaId){
-        
-        let elementoAlgo=document.querySelector("table#"+tablaId+" tbody");
-        
+function addRow(tablaId) {
 
-        let tiempos=document.querySelectorAll("table#"+tablaId+" tbody tr:first-child td").length;
+    let elementoAlgo = document.querySelector("table#" + tablaId + " tbody");
 
-        let filaTiempos=document.createElement('tr');
-        
-        
-        for (let index = 0; index < tiempos; index++) {
-            filaTiempos.appendChild(document.createElement('td'));
-            filaTiempos.cells[index].innerHTML="&nbsp;";
 
-            filaTiempos.cells[index].addEventListener('click',()=>{
-                filaTiempos.cells[index].innerText="E";
-                filaTiempos.cells[index].classList.remove("pop");
-                void filaTiempos.cells[index].offsetWidth;
-                filaTiempos.cells[index].classList.add("pop");
+    let tiempos = document.querySelectorAll("table#" + tablaId + " tbody tr:first-child td").length;
+    console.log(tiempos)
 
-            });
+    let filaTiempos = document.createElement('tr');
 
-            filaTiempos.cells[index].addEventListener('dblclick',()=>{
-                filaTiempos.cells[index].innerText="X";
-                filaTiempos.cells[index].classList.remove("pop");
-                void filaTiempos.cells[index].offsetWidth;
-                filaTiempos.cells[index].classList.add("pop");
-                
-            });
 
-            filaTiempos.cells[index].addEventListener('contextmenu',()=>{
-                filaTiempos.cells[index].innerText="";
+    for (let index = 0; index < tiempos; index++) {
+        filaTiempos.appendChild(document.createElement('td'));
+        filaTiempos.cells[index].innerHTML = "&nbsp;";
 
-                
-            });
+        filaTiempos.cells[index].addEventListener('click', () => {
+            filaTiempos.cells[index].innerText = "E";
+            filaTiempos.cells[index].classList.remove("pop");
+            void filaTiempos.cells[index].offsetWidth;
+            filaTiempos.cells[index].classList.add("pop");
 
-        }
-        filaTiempos.cells[0].innerHTML=letrasProcesos[countProcesos];
-        elementoAlgo.appendChild(filaTiempos);
+        });
 
-        
+        filaTiempos.cells[index].addEventListener('dblclick', () => {
+            filaTiempos.cells[index].innerText = "X";
+            filaTiempos.cells[index].classList.remove("pop");
+            void filaTiempos.cells[index].offsetWidth;
+            filaTiempos.cells[index].classList.add("pop");
+
+        });
+
+
+        filaTiempos.cells[index].addEventListener('contextmenu', () => {
+            filaTiempos.cells[index].innerText = "";
+
+
+        });
+
+    }
+    filaTiempos.cells[0].innerHTML = letrasProcesos[countProcesos];
+    elementoAlgo.appendChild(filaTiempos);
+
+
 }
 
-function addRowDatos(){
-    
+function addRowDatos() {
 
-     let elementoTbody=document.querySelector("table.datos tbody");
-     let fila=document.createElement('tr');
 
-        for (let index = 0; index < 3; index++) {
-            fila.appendChild(document.createElement('td'));
-        }
-        fila.cells[0].innerHTML=letrasProcesos[countProcesos];
+    let elementoTbody = document.querySelector("table.datos tbody");
+    let fila = document.createElement('tr');
 
-        elementoTbody.appendChild(fila);
-    
+    for (let index = 0; index < 3; index++) {
+        fila.appendChild(document.createElement('td'));
+    }
+    if (countProcesos == letrasProcesos.length) {
+        countProcesos = 0;
+    }
+    fila.cells[0].innerHTML = letrasProcesos[countProcesos];
+
+    elementoTbody.appendChild(fila);
+
     addRow("fcfs");
     addRow("sjf");
     addRow("srjn");
@@ -74,16 +79,17 @@ function addRowDatos(){
 
 
 
-function addColumn(tablaId){
+function addColumn(tablaId) {
 
-    let tiempos=document.querySelectorAll("table#"+tablaId+" tbody tr");
+    let tiempos = document.querySelectorAll("table#" + tablaId + " tbody tr");// devuelve la lista de tr
 
-    
-    tiempos.forEach(fila=>{
+    console.log(tiempos);
+    tiempos.forEach(fila => {
         fila.appendChild(document.createElement('td'));
-    })
-    let longitud=document.querySelector("table#"+tablaId+" tbody tr:first-child").cells.length-1;
+    }) 
+    //calculamos el numero de columnas actual para usarlo como ID
+    let longitud = document.querySelector("table#" + tablaId + " tbody tr:first-child").cells.length - 1;
 
-    document.querySelector("table#"+tablaId+" tbody tr:first-child").cells[longitud].innerHTML=longitud;
+    document.querySelector("table#" + tablaId + " tbody tr:first-child").cells[longitud].innerHTML = longitud;
 
 }
